@@ -11,6 +11,9 @@ module.exports = {
         "primary": "#3BB77E",
         "primaryText": "#253D4E"
       },
+      screens: {
+        "ssm": "360px"
+      }
     },
   },
   plugins: [],
