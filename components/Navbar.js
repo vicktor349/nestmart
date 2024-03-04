@@ -21,12 +21,10 @@ const Navbar = () =>
                             :
                             <Image src={"/images/icons/close.svg"} height={100} width={100}
                                 className='w-8 h-8 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
-
-
                     }
                 </div>
                 {/* DIV LOGO */}
-                <div className="flex">
+                <div className="flex items-center mx-auto">
                     <Link href="/">
                         <Image src={"/images/logo.svg"} width={100} height={100} alt="Nest Mart Logo" className='h-14 w-14' />
                     </Link>
@@ -36,7 +34,7 @@ const Navbar = () =>
                     </section>
                 </div>
                 {/* SEARCHBAR DIV */}
-                <div className='border-2 rounded-md border-[#BCE3C9] w-[30rem] mx-auto ssm:hidden xl:flex justify-center'>
+                <div className='border-2 rounded-md border-[#BCE3C9] w-[30rem] mx-auto ssm:hidden lg:flex justify-center'>
                     <section className='flex items-center py-2 px-1'>
                         <p className="hover:cursor-pointer font-bold text-sm" >All Categories</p>
                         <Image src={"/images/icons/downwardarrow.svg"} height={10} width={10} alt='Downward Arrow' />
