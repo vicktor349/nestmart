@@ -26,7 +26,7 @@ const Navbar = () =>
                     }
                 </div>
                 {/* DIV LOGO */}
-                <div className="flex items-center mx-auto">
+                <div className="flex">
                     <Link href="/">
                         <Image src={"/images/logo.svg"} width={100} height={100} alt="Nest Mart Logo" className='h-14 w-14' />
                     </Link>
