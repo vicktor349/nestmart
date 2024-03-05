@@ -1,3 +1,4 @@
+import FeaturedCategories from "@/components/FeaturedCategories";
 import HeroBanner from "@/components/HeroBanner";
 import Head from "next/head";
 
@@ -11,6 +12,7 @@ export default function Home()
       </Head>
       <div>
         <HeroBanner />
+        <FeaturedCategories />
       </div>
     </>
   );
