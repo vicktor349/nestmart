@@ -24,7 +24,7 @@ const Navbar = () =>
                     }
                 </div>
                 {/* DIV LOGO */}
-                <div className="flex items-center mx-auto">
+                <div className="items-center ssm:hidden lg:flex mx-auto">
                     <Link href="/">
                         <Image src={"/images/logo.svg"} width={100} height={100} alt="Nest Mart Logo" className='h-14 w-14' />
                     </Link>
@@ -43,7 +43,7 @@ const Navbar = () =>
                     </section>
                 </div>
                 {/* THIRD SECTION OF DIV */}
-                <div className='flex items-center select-none'>
+                <div className='flex items-center select-none ml-auto'>
                     <div className="border-[#ECECEC] rounded-sm border hover:cursor-pointer shadow-xl mr-4">
                         <section className='py-2 px-1 ssm:hidden xl:flex items-center'>
                             <Image src={"/images/icons/mappoint.svg"} alt="map point" height={20} width={20} />
