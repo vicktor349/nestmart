@@ -13,6 +13,9 @@ module.exports = {
       },
       screens: {
         "ssm": "360px"
+      },
+      gridTemplateColumns: {
+        "200": "repeat(auto-fit, minmax(200px, 1fr))"
       }
     },
   },
