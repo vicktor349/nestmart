@@ -15,7 +15,7 @@ module.exports = {
         "ssm": "360px"
       },
       gridTemplateColumns: {
-        "200": "repeat(auto-fit, minmax(200px, 1fr))"
+        "200": "repeat(auto-fit, minmax(180px, 1fr))"
       }
     },
   },

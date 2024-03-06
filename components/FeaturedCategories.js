@@ -8,7 +8,7 @@ const FeaturedCategories = () =>
             <p className='text-primaryText text-4xl font-semibold py-6'>Featured Categories</p>
             <div className='grid grid-cols-200 gap-8 mt-6'>
                 <FeaturedCategoriesCard bg="bg-[#F2FCE4]" logo="/images/featuredcategoryimages/burger.png" item="Cake & Milk" amount="26" />
-                <FeaturedCategoriesCard bg="bg-[#FFFCEB]" logo="/images/featuredcategoryimages/kiwi.png" item="Oganic Kiwi" amount="28" />
+                <FeaturedCategoriesCard bg="bg-[#FFFCEB]" logo="/images/featuredcategoryimages/kiwi.png" item="Organic Kiwi" amount="28" />
                 <FeaturedCategoriesCard bg="bg-[#ECFFEC]" logo="/images/featuredcategoryimages/peaches.png" item="Peach" amount="14" />
                 <FeaturedCategoriesCard bg="bg-[#FEEFEA]" logo="/images/featuredcategoryimages/redapple.png" item="Red Apple" amount="54" />
                 <FeaturedCategoriesCard bg="bg-[#FFF3EB]" logo="/images/featuredcategoryimages/snacks.png" item="Snack" amount="56" />
