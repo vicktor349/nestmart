@@ -9,6 +9,11 @@ const HeroBanner = () =>
                 <p className='text-primaryText ssm:text-2xl md:text-5xl font-semibold'>Fresh Vegetables</p>
                 <p className='text-primaryText ssm:text-2xl md:text-5xl font-semibold'>Big discount</p>
                 <p className='text-[#7E7E7E]'>Save up to 50% off on your first order</p>
+                <div className='bg-white rounded-[6rem] flex items-center'>
+                    <p className='mx-6'>icon</p>
+                    <input type="text" className='rounded-[6rem] text-[#9ca3af] outline-none' placeholder='Your email address' />
+                    <button className='bg-primary rounded-[6rem] text-white w-36 ml-6'>Subscribe</button>
+                </div>
             </div>
         </div>
     )

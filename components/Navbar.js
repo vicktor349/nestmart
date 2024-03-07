@@ -26,7 +26,7 @@ const Navbar = () =>
                 {/* DIV LOGO */}
                 <div className="items-center ssm:hidden lg:flex">
                     <Link href="/">
-                        <Image src={"/images/logo.svg"} width={100} height={100} alt="Nest Mart Logo" className='h-14 w-14' />
+                        <Image src={"/images/logo.svg"} width={100} height={100} alt="Nest Mart Logo" className='h-14 w-14' priority />
                     </Link>
                     <section className='leading-3 ml-2'>
                         <Link className='text-primary text-4xl font-bold select-none ' href="/">Nest</Link>
@@ -36,9 +36,9 @@ const Navbar = () =>
                 {/* SEARCHBAR DIV */}
                 <div className='border-2 rounded-md border-[#BCE3C9] w-[30rem] mx-auto ssm:hidden lg:flex justify-center'>
                     <section className='flex items-center py-2 px-1'>
-                        <p className="hover:cursor-pointer font-bold text-sm" >All Categories</p>
-                        <Image src={"/images/icons/downwardarrow.svg"} height={10} width={10} alt='Downward Arrow' />
-                        <input type="text" className='w-[20rem] pl-2 outline-none' placeholder='Search for items...' />
+                        <p className="hover:cursor-pointer font-bold text-sm text-primary" >All Categories</p>
+                        <Image src={"/images/icons/downwardarrow.svg"} height={10} width={10} alt='Downward Arrow' className='w-4 h-4 mt-1' />
+                        <input type="text" className='w-[20rem] text-[#9ca3af] pl-2 outline-none' placeholder='Search for items...' />
                         <Image src={"/images/icons/search.svg"} width={20} height={20} alt='Search Icon' className="hover:cursor-pointer ml-1" />
                     </section>
                 </div>
@@ -48,7 +48,7 @@ const Navbar = () =>
                         <section className='py-2 px-1 ssm:hidden xl:flex items-center'>
                             <Image src={"/images/icons/mappoint.svg"} alt="map point" height={20} width={20} />
                             <h3 className="text-primary px-1">Your Location</h3>
-                            <Image src={"/images/icons/downwardarrow.svg"} height={100} width={10} alt='Downward Arrow' />
+                            <Image src={"/images/icons/downwardarrow.svg"} height={100} width={100} className='w-4 h-4 mt-1' alt='Downward Arrow' />
                         </section>
                     </div>
                     {/* compare div */}
