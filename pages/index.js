@@ -1,4 +1,5 @@
 import BestSales from "@/components/BestSales";
+import Deals from "@/components/Deals";
 import FeaturedCategories from "@/components/FeaturedCategories";
 import HeroBanner from "@/components/HeroBanner";
 import PopularProducts from "@/components/PopularProducts";
@@ -17,6 +18,7 @@ export default function Home()
         <FeaturedCategories />
         <PopularProducts />
         <BestSales />
+        <Deals />
       </div>
     </>
   );
