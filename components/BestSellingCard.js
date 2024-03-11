@@ -13,7 +13,7 @@ const BestSellingCard = () =>
                     bestsellingData.map((data, id) =>
                     {
                         return (
-                            <div className='border border-1 border-[#ADADAD] rounded-xl' key={id}>
+                            <div className='border border-1 border-[#ADADAD] rounded-xl hover:shadow-xl hover:cursor-pointer' key={id}>
                                 <p className="bg-primary text-white w-20 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl" >{data.tag}</p>
                                 <Image src={data.imageUrl} className="h-48 w-48 mx-auto mt-5 object-contain" alt='Product Image' width={100} height={100} />
                                 <div className='mx-6'>

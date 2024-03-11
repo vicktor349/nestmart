@@ -4,7 +4,7 @@ import React from 'react'
 const FeaturedCategoriesCard = ({ logo, item, amount, bg }) =>
 {
     return (
-        <div className={`${bg} w-48 h-64 flex justify-center items-center border border-transparent rounded-3xl`}>
+        <div className={`${bg} w-48 h-64 flex justify-center items-center border border-transparent rounded-3xl hover:shadow-md hover:cursor-pointer`}>
             <div>
                 <Image src={logo} alt='Featured Image' width={100} height={100} className='text-center h-auto w-auto' />
                 <section className='text-center'>
