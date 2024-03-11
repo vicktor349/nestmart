@@ -26,7 +26,7 @@ const Navbar = () =>
                 {/* DIV LOGO */}
                 <div className="items-center ssm:hidden lg:flex">
                     <Link href="/">
-                        <Image src={"/images/logo.svg"} width={100} height={100} alt="Nest Mart Logo" className='h-14 w-14' priority />
+                        <Image src={"/images/logo.png"} width={100} height={100} alt="Nest Mart Logo" className='h-10 w-12' priority />
                     </Link>
                     <section className='leading-3 ml-2'>
                         <Link className='text-primary text-4xl font-bold select-none ' href="/">Nest</Link>
