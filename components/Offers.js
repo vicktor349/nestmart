@@ -36,8 +36,8 @@ const Offers = () =>
             {
                 return (
                     <div key={id} className='bg-[#F4F6FA] w-full rounded-md'>
-                        <div className='flex items-center p-1'>
-                            <Image src={data.imageUrl} alt='offer image' width={100} height={100} className='h-14 w-14' />
+                        <div className='flex items-center px-1 py-2'>
+                            <Image src={data.imageUrl} alt='offer image' width={100} height={100} className='h-14 w-14 object-contain' />
                             <div className='ml-4'>
                                 <h3 className='font-semibold'> {data.name}</h3>
                                 <p className='text-[#ADADAD]'>{data.text}</p>
