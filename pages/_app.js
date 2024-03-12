@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 export default function App({ Component, pageProps })
 {
   return (
-    <div className="mx-6">
+    <div className="mx-28">
       <Layout>
         <Component {...pageProps} />
       </Layout>
