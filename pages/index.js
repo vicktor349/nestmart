@@ -21,7 +21,7 @@ export default function Home()
         <PopularProducts />
         <BestSales />
         <Deals />
-        <BottomHeroBanner />
+        {/* <BottomHeroBanner /> */}
         <Offers />
       </div>
     </>
