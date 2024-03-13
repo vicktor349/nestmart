@@ -10,7 +10,7 @@ const Navbar = () =>
         setIsOpened(!isOpened)
     }
     return (
-        <nav className="mt-3">
+        <nav className="mt-3 bg-[rgb(255,255,255)] sticky top-0 h-24">
             <div className='flex items-center'>
                 {/* burger icon */}
                 <div className="ssm:flex xl:hidden">
@@ -24,7 +24,7 @@ const Navbar = () =>
                     }
                 </div>
                 {/* DIV LOGO */}
-                <div className="items-center ssm:hidden lg:flex">
+                <div className="items-center ssm:hidden xl:flex">
                     <Link href="/">
                         <Image src={"/images/logo.png"} width={100} height={100} alt="Nest Mart Logo" className='h-10 w-12' priority />
                     </Link>
@@ -44,13 +44,6 @@ const Navbar = () =>
                 </div>
                 {/* THIRD SECTION OF DIV */}
                 <div className='flex items-center select-none ml-auto'>
-                    <div className="border-[#ECECEC] rounded-sm border hover:cursor-pointer shadow-xl mr-4">
-                        <section className='py-2 px-1 ssm:hidden xl:flex items-center'>
-                            <Image src={"/images/icons/mappoint.svg"} alt="map point" height={20} width={20} />
-                            <h3 className="text-primary px-1">Your Location</h3>
-                            <Image src={"/images/icons/downwardarrow.svg"} height={100} width={100} className='w-4 h-4 mt-1' alt='Downward Arrow' />
-                        </section>
-                    </div>
                     {/* compare div */}
                     <div>
                         <section className='ssm:hidden xl:flex items-center'>
