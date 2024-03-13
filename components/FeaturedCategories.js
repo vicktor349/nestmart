@@ -5,8 +5,8 @@ const FeaturedCategories = () =>
 {
     return (
         <div className='ssm:hidden lg:block'>
-            <p className='text-primaryText text-4xl font-semibold py-6'>Featured Categories</p>
-            <div className='grid grid-cols-200 gap-8 mt-6'>
+            <p className='text-primaryText text-4xl font-semibold py-10'>Featured Categories</p>
+            <div className='grid grid-cols-200 gap-1'>
                 <FeaturedCategoriesCard bg="bg-[#F2FCE4]" logo="/images/featuredcategoryimages/burger.png" item="Cake & Milk" amount="26" />
                 <FeaturedCategoriesCard bg="bg-[#FFFCEB]" logo="/images/featuredcategoryimages/kiwi.png" item="Organic Kiwi" amount="28" />
                 <FeaturedCategoriesCard bg="bg-[#ECFFEC]" logo="/images/featuredcategoryimages/peaches.png" item="Peach" amount="14" />
