@@ -16,8 +16,8 @@ const Deals = () =>
               return (
                 <div key={id}>
                   <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain" alt='Product Image' width={100} height={100} />
-                  <div className='mx-auto w-72 bg-white shadow-md relative -mt-28 rounded-2xl'>
-                    <div className='px-7 py-1'>
+                  <div className='mx-auto w-64 bg-white shadow-md relative -mt-28 rounded-2xl'>
+                    <div className='px-4 py-1'>
                       <p className='text-sm text-[#ADADAD] w-full bg-white'>{data.category}</p>
                       <h3 className='text-primaryText font-semibold hover:cursor-pointer'>{data.text}</h3>
                       <section >
