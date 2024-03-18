@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { useRouter } from 'next/router'
 
 const CategoryNavbar = () =>
 {
+    const location = useRouter()
+    const activeColor = (p) => location.pathname === p ? "#3BB77E" : "#253D4E"
     return (
         <div className='ssm:hidden lg:flex items-center justify-between'>
             <div className="flex flex-row items-center bg-primary w-52 py-2 px-2 text-white border border-1 border-primary rounded-md hover:cursor-pointer">
@@ -14,7 +17,7 @@ const CategoryNavbar = () =>
                 <Image src={"/images/icons/fire.svg"} width={100} height={100} className='w-5 h-5' alt='fire icon' />
                 <Link href="#" className="font-semibold hover:text-[#7E7E7E] text-primaryText">Deals</Link>
             </div>
-            <Link href="#" className="font-semibold text-primaryText hover:text-[#7E7E7E]">Home</Link>
+            <Link href="/" className="font-semibold text-primaryText hover:text-[#7E7E7E]" style={{ color: activeColor("/") }}>Home</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E]'>About</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E]'>Shop</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E]'>Vendors</Link>
