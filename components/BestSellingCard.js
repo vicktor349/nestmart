@@ -8,7 +8,7 @@ const BestSellingCard = () =>
 
     return (
         <div className='mt-6'>
-            <div className='grid grid-cols-100 gap-5 select-none'>
+            <div className='grid ssm:grid-cols-50 sm:grid-cols-100 gap-5 select-none'>
                 {
                     bestsellingData.map((data, id) =>
                     {
