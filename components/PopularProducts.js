@@ -9,7 +9,7 @@ const PopularProducts = () =>
     return (
         <div className='mt-6'>
             <h2 className='text-3xl font-semibold text-primaryText py-12'>Popular Products</h2>
-            <div className='grid grid-cols-100 gap-5 select-none'>
+            <div className='grid ssm:grid-cols-50 sm:grid-cols-100 gap-5 select-none'>
                 {
                     popularData.map((data, id) =>
                     {
