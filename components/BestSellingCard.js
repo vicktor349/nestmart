@@ -29,8 +29,8 @@ const BestSellingCard = () =>
                                             <p className='text-[#3BB77E] font-bold'>{data.price}</p>
                                             <p className='text-[#ADADAD] ml-2 font-bold'><s>{data.changedPrice}</s></p>
                                         </section>
-                                        <div className="w-60 bg-[#E9ECEF] rounded-full h-2 dark:bg-[#E9ECEF] my-1">
-                                            <div className="bg-primary h-2 rounded-full w-24"></div>
+                                        <div className="w-full bg-[#E9ECEF] rounded-full h-2 dark:bg-[#E9ECEF] my-1">
+                                            <div className="bg-primary h-2 rounded-full w-20"></div>
                                         </div>
                                         <p className='text-[#ADADAD] text-sm'>Sold: 90/120</p>
                                         <Link href="/" className='text-white text-sm bg-primary flex justify-center mt-2 py-2 px-5 ml-auto rounded-[0.2rem] mb-8 font-bold'>
