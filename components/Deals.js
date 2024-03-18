@@ -15,14 +15,14 @@ const Deals = () =>
             {
               return (
                 <div key={id}>
-                  <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain" alt='Product Image' width={100} height={100} />
+                  <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain" alt='Product Image' width={500} height={500} />
                   <div className='mx-auto w-64 bg-white shadow-md relative -mt-28 rounded-2xl'>
                     <div className='px-4 py-1'>
                       <p className='text-sm text-[#ADADAD] w-full bg-white'>{data.category}</p>
                       <h3 className='text-primaryText font-semibold hover:cursor-pointer'>{data.text}</h3>
                       <section >
                         <section className='flex justify-between'>
-                          <Image src={"/images/popular/rating.png"} alt='Rating' width={100} height={100} className='object-contain h-auto w-auto' />
+                          <Image src={"/images/popular/rating.png"} alt='Rating' width={500} height={500} className='object-contain h-auto w-auto' />
                           <p className='text-[#B6B6B6]'>({data.rating})</p>
                         </section>
                         <p>By <span className='text-[#3BB77E] hover:cursor-pointer hover:underline'>{data.vendor}</span></p>
