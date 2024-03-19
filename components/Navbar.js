@@ -10,7 +10,7 @@ const Navbar = () =>
         setIsOpened(!isOpened)
     }
     return (
-        <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24">
+        <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 mt-5">
             <div className='flex items-center'>
                 {/* burger icon */}
                 <div className="ssm:flex xl:hidden">
@@ -43,7 +43,7 @@ const Navbar = () =>
                     </section>
                 </div>
                 {/* THIRD SECTION OF DIV */}
-                <div className='flex items-center select-none'>
+                <div className='flex items-center select-none ml-auto'>
                     {/* compare div */}
                     <div>
                         <section className='ssm:hidden xl:flex items-center'>
