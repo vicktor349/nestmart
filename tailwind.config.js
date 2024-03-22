@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       colors: {
         "primary": "#3BB77E",
-        "primaryText": "#253D4E"
+        "primaryText": "#253D4E",
+        "borderColor": "#ECECEC",
+        "secondaryText": "#7E7E7E"
       },
       screens: {
         "ssm": "360px"
@@ -19,6 +21,9 @@ module.exports = {
         "100": "repeat(auto-fit, minmax(250px, 1fr))",
         "50": "repeat(auto-fit, minmax(190px, 1fr))",
         "footer": "repeat(auto-fit, minmax(260px, 1fr))"
+      },
+      fontFamily: {
+        "Roboto": "Roboto"
       }
     },
   },
