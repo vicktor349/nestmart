@@ -1,3 +1,4 @@
+import OurTeam from '@/components/about/OurTeam'
 import WhatweprovideCard from '@/components/about/WhatweprovideCard'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -110,6 +111,8 @@ const About = () =>
                     </p>
                 </div>
             </div>
+            {/* OUR TRAM */}
+            <OurTeam />
         </div>
     )
 }
