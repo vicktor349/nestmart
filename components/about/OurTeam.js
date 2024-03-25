@@ -10,9 +10,7 @@ const OurTeam = () =>
             {
                 return (
                     <div key={id}>
-                        <div className={`bg-[url(${data.imageUrl})]`}>
 
-                        </div>
                     </div>
                 )
             })}
