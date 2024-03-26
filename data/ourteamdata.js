@@ -4,12 +4,12 @@ const ourteamdata = [
         name: "H. Merinda",
         position: "CEO & Co-Founder"
     },
-    {
-        imageUrl: "/public/images/aboutpageimages/engineer.png",
-        name: "Dilan Specter",
-        position: "Head Engineer"
+    // {
+    //     imageUrl: "/images/aboutpageimages/engineer.png",
+    //     name: "Dilan Specter",
+    //     position: "Head Engineer"
 
-    },
+    // },
 ]
 
 export default ourteamdata;

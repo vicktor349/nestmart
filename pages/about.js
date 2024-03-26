@@ -85,7 +85,7 @@ const About = () =>
                 </div>
             </div>
             {/* WHO WE ARE DIV */}
-            <div className='grid grid-cols-3 mt-20 gap-10'>
+            <div className='grid grid-cols-3 mt-32 gap-10 leading-8'>
                 <div className='w-full'>
                     <h1 className="text-primaryText text-3xl font-semibold">Who we are</h1>
                     <p className="text-secondaryText">
@@ -111,6 +111,7 @@ const About = () =>
                     </p>
                 </div>
             </div>
+            <Image src={"/images/aboutpageimages/teamstats.png"} width={2000} height={2000} alt='Team stats' className='w-full my-24' />
             {/* OUR TRAM */}
             <OurTeam />
         </div>
