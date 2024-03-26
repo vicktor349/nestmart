@@ -23,7 +23,7 @@ module.exports = {
         "footer": "repeat(auto-fit, minmax(260px, 1fr))"
       },
       fontFamily: {
-        "Roboto": "Roboto"
+        "Montserrat": "Montserrat",
       }
     },
   },
