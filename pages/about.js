@@ -12,29 +12,31 @@ const About = () =>
             <Head>
                 <title>Nest | About</title>
             </Head>
-            <div className='grid grid-cols-2 my-20 2xl:h-fit'>
-                <div>
-                    <Image src={"/images/aboutpageimages/about.png"}
+            <div className='grid grid-cols-2 mt-5 gap-10'>
+                <div className='w-fit'>
+                    <Image
+                        src={"/images/aboutpageimages/about.png"}
                         alt='Woman Cooking'
                         width={500}
                         height={500}
                         className='rounded-2xl hover:cursor-pointer select-none'
+                        priority
                     />
                 </div>
-                <div className='text-[#7E7E7E]'>
-                    <p className='font-bold text-primaryText text-5xl text-center'>Welcome to Nest</p>
-                    <p className='my-6'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate id est laborum.
-                    </p>
-                    <p className='my-6'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate id est laborum.
-                    </p>
-                    <div className='grid grid-cols-3 gap-5'>
+                <div className='text-[#7E7E7E] flex flex-col justify-between'>
+                    <div>
+                        <p className='font-bold text-primaryText xl:text-5xl text-center'>Welcome to Nest</p>
+                        <p className='ssm:my-2 xl:my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            reprehenderit in voluptate id est laborum.
+                        </p>
+                        <p className='ssm:my-2 xl:my-4'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            reprehenderit in voluptate id est laborum.
+                        </p>
+                    </div>
+                    <div className='grid grid-cols-3 gap-5 relative'>
                         <Image
                             src={"/images/aboutpageimages/strawberry.png"}
                             alt="chef spraying on strawberry"
@@ -59,6 +61,8 @@ const About = () =>
                     </div>
                 </div>
             </div>
+
+
             {/* TITLE DIV */}
             <div className='flex items-center justify-center'>
                 <h1 className='text-3xl text-primaryText mb-6 font-bold'>
