@@ -123,7 +123,7 @@ const About = () =>
                     </p>
                 </div>
             </div>
-            <Image src={"/images/aboutpageimages/teamstats.png"} width={2000} height={2000} alt='Team stats' className='w-full my-24' />
+            <Image src={"/images/aboutpageimages/teamstats.png"} width={2000} height={2000} alt='Team stats' className='w-full ssm:my-10 lg:my-24' />
             {/* OUR TRAM */}
             <OurTeam />
             <div className='my-28'>
