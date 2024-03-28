@@ -97,7 +97,7 @@ const About = () =>
                 </div>
             </div>
             {/* WHO WE ARE DIV */}
-            <div className='grid grid-cols-provide mt-20 gap-10'>
+            <div className='grid grid-cols-providessm mt-20 gap-10'>
                 <div className='w-full'>
                     <h1 className="text-primaryText text-3xl font-semibold">Who we are</h1>
                     <p className="text-secondaryText">
