@@ -29,7 +29,7 @@ const BreadCrumb = ({
                         : link;
                     return (
                         <React.Fragment key={index}>
-                            <li className="ml-3 font-bold" style={{ color: activeColor("/about") }}>
+                            <li className="ml-3 font-bold" style={{ color: activeColor(`${href}`) }}>
                                 <Link href={href}>{itemLink}</Link>
                             </li>
                             {pathNames.length !== index + 1 && separator}
