@@ -24,7 +24,7 @@ const CategoryNavbar = () =>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Mega menu</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Blog</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Pages</Link>
-            <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Contact</Link>
+            <Link href="/contact" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm' style={{ color: activeColor("/contact") }}>Contact</Link>
             <div className='ssm:hidden xl:flex items-center'>
                 <Image src={"/images/icons/headphones.svg"} alt="headphones icon" width={100} height={100} className='h-10 w-10' />
                 <section className="leading-3 ml-2">
