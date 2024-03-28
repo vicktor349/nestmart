@@ -20,7 +20,8 @@ module.exports = {
         "200": "repeat(auto-fit, minmax(170px, 1fr))",
         "100": "repeat(auto-fit, minmax(250px, 1fr))",
         "50": "repeat(auto-fit, minmax(190px, 1fr))",
-        "provide": "repeat(auto-fit, minmax(320px, 1fr))",
+        "providexl": "repeat(auto-fit, minmax(350px, 1fr))",
+        "providessm": "repeat(auto-fit, minmax(300px, 1fr))",
         "footer": "repeat(auto-fit, minmax(260px, 1fr))"
       },
       fontFamily: {

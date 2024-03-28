@@ -6,7 +6,7 @@ import Image from 'next/image'
 const WhatweprovideCard = () =>
 {
     return (
-        <div className='grid grid-cols-provide gap-10'>
+        <div className='grid ssm:grid-cols-providessm xl:grid-cols-providexl  gap-10'>
             {whatweprovideData.map((data, id) =>
             {
                 return (
