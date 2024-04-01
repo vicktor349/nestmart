@@ -5,12 +5,16 @@ import { useRouter } from 'next/router'
 
 const Navbar = () =>
 {
-    const [isOpened, setIsOpened] = useState(true)
+    const [isOpened, setIsOpened] = useState(false)
     const location = useRouter()
     const activeColor = (p) => location.pathname === p ? "#3BB77E" : "#253D4E"
     const handleToggle = () =>
     {
         setIsOpened(!isOpened)
+    }
+    const closeMobileMenu = () =>
+    {
+        setIsOpened(false)
     }
     return (
         <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 grid">
@@ -18,7 +22,7 @@ const Navbar = () =>
                 {/* burger icon */}
                 <div className="ssm:flex xl:hidden">
                     {
-                        isOpened ?
+                        !isOpened ?
                             <Image src={"/images/icons/burger.svg"} height={100} width={100}
                                 className='w-8 h-8 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
                             :
@@ -28,24 +32,24 @@ const Navbar = () =>
                 </div>
                 {/* MOBILE DRAWER */}
                 {
-                    !isOpened ?
+                    isOpened ?
                         <div className='absolute mt-72 bg-white w-full'>
                             <div className='mx-4 mb-6'>
                                 <ul className="space-y-5">
                                     <li>
-                                        <Link href="/" className="text-primaryText block" style={{ color: activeColor("/") }}>Home</Link>
+                                        <Link href="/" className="text-primaryText block" style={{ color: activeColor("/") }} onClick={closeMobileMenu}>Home</Link>
                                     </li>
                                     <li>
-                                        <Link href="/about" className="text-primaryText block" style={{ color: activeColor("/about") }}>About</Link>
+                                        <Link href="/about" className="text-primaryText block" style={{ color: activeColor("/about") }} onClick={closeMobileMenu}>About</Link>
                                     </li>
                                     <li>
-                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }}>Shop</Link>
+                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }} onClick={closeMobileMenu}>Shop</Link>
                                     </li>
                                     <li>
-                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }}>Blog</Link>
+                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }} onClick={closeMobileMenu}>Blog</Link>
                                     </li>
                                     <li>
-                                        <Link href="/contact" className="text-primaryText block" style={{ color: activeColor("/contact") }}>Contact</Link>
+                                        <Link href="/contact" className="text-primaryText block" style={{ color: activeColor("/contact") }} onClick={closeMobileMenu}>Contact</Link>
                                     </li>
                                 </ul>
                             </div>
