@@ -1,16 +1,19 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Navbar = () =>
 {
     const [isOpened, setIsOpened] = useState(true)
+    const location = useRouter()
+    const activeColor = (p) => location.pathname === p ? "#3BB77E" : "#253D4E"
     const handleToggle = () =>
     {
         setIsOpened(!isOpened)
     }
     return (
-        <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 mt-5 grid">
+        <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 grid">
             <div className='flex items-center'>
                 {/* burger icon */}
                 <div className="ssm:flex xl:hidden">
@@ -23,6 +26,34 @@ const Navbar = () =>
                                 className='w-8 h-8 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
                     }
                 </div>
+                {/* MOBILE DRAWER */}
+                {
+                    !isOpened ?
+                        <div className='absolute mt-72 bg-white w-full'>
+                            <div className='mx-4 mb-6'>
+                                <ul className="space-y-5">
+                                    <li>
+                                        <Link href="/" className="text-primaryText block" style={{ color: activeColor("/") }}>Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/about" className="text-primaryText block" style={{ color: activeColor("/about") }}>About</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }}>Shop</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }}>Blog</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/contact" className="text-primaryText block" style={{ color: activeColor("/contact") }}>Contact</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        :
+                        ""
+                }
+                {/* DESKTOP VIEW */}
                 {/* DIV LOGO */}
                 <div className="items-center ssm:hidden xl:flex">
                     <Link href="/">
