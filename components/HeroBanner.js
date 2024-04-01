@@ -22,14 +22,14 @@ const HeroBanner = () =>
     }
 
     return (
-        <div className='group w-full ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex justify-center items-center relative'>
+        <div className='lg:group w-full ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex justify-center items-center relative'>
             <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full rounded-2xl bg-center bg-cover duration-1000 relative'>
                 {/* LEFT ARROW */}
-                <div className='hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
+                <div className='lg:hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
                     <BsChevronCompactLeft onClick={prevSlide} size={30} />
                 </div>
                 {/* RIGHT ARROW */}
-                <div className='hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
+                <div className='lg:hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
                     <BsChevronCompactRight onClick={nextSlide} size={30} />
                 </div>
                 <div className='flex absolute items-center bottom-0 justify-center w-full'>
