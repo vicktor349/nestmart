@@ -11,23 +11,34 @@ const contact = () =>
             </Head>
             <div>
                 {/* HOW TO HELP DIV */}
-                <div className='grid grid-cols-2 mx-20 my-16'>
-                    <div className='w-[30rem] leading-8'>
-                        <p className="text-primary font-bold text-2xl my-5">How can we help you?</p>
-                        <h3 className="text-primaryText text-3xl font-semibold">Let us know how</h3>
-                        <h3 className='text-primaryText text-3xl font-semibold'>we can help you</h3>
+                <div className='lg:mx-16 mt-6 mb-16'>
+                    <div className='leading-8'>
+                        <p className="text-primary font-bold ssm:text-xl lg:text-2xl xl:text-4xl text-center my-2">How can we help you?</p>
+                        <h3 className="text-primaryText sm:text-2xl lg:text-3xl xl:text-5xl font-semibold text-center my-4">Let us know how we can help you</h3>
                         <p className="text-secondaryText w-full">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                             elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
                             leo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                            elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                            elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.
                         </p>
-                        <p className='text-secondaryText'>
+                        <p className='text-secondaryText my-7'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                            elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                            elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                             elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
                             leo.
                         </p>
                     </div>
-                    <div className='grid grid-cols-2 leading-7 gap-5'>
+                    <div className='grid lg:grid-cols-2 leading-7 gap-5'>
                         <div>
                             <p className='text-primary font-bold text-lg'>01. Visit Feedback</p>
                             <p className='text-secondaryText'>
