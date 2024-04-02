@@ -1,6 +1,36 @@
 import Map from '@/components/contact/Map'
 import Head from 'next/head'
 import React from 'react'
+import { TbMapPin } from "react-icons/tb";
+
+
+// BUTTON COMPONENT
+const Button = () =>
+{
+    return (
+        <div className='text-white bg-primary rounded-md w-40 h-12 flex items-center justify-center text-center hover:cursor-pointer select-none'>
+            <TbMapPin className='mr-4 text-2xl' />View map
+        </div>
+
+    )
+}
+
+// CONTACT COMPONENT
+const Contact = ({ header }) =>
+{
+    return (
+        <div>
+            <div className='leading-10 text-secondaryText'>
+                <h2 className='text-primary text-2xl font-semibold'>{header}</h2>
+                <p>205 North Michigan Avenue, Suite 810</p>
+                <p>Chicago, 60601, USA</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: contact@Evara.com</p>
+            </div>
+            <Button />
+        </div>
+    )
+}
 
 const contact = () =>
 {
@@ -73,8 +103,14 @@ const contact = () =>
                         </div>
                     </div>
                 </div>
+                {/* HOW TO CONTACT US DIV */}
             </div>
             <Map />
+            <div className='grid sm:grid-cols-2 xl:grid-cols-3 lg:mx-10 mt-6 mb-16'>
+                <Contact header="Office" />
+                <Contact header="Studio" />
+                <Contact header="Shop" />
+            </div>
         </>
     )
 }
