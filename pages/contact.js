@@ -1,11 +1,16 @@
 import Map from '@/components/contact/Map'
+import { Input, Textarea, Button } from '@mantine/core';
 import Head from 'next/head'
 import React from 'react'
 import { TbMapPin } from "react-icons/tb";
+import { MdOutlineMailOutline, MdSubject } from "react-icons/md";
+import { BsTelephone } from "react-icons/bs";
+import { AiOutlineUser } from "react-icons/ai";
+import BottomHeroBanner from '@/components/BottomHeroBanner';
 
 
 // BUTTON COMPONENT
-const Button = () =>
+const MapButton = () =>
 {
     return (
         <div className='text-white bg-primary rounded-md w-40 h-12 flex items-center justify-center text-center hover:cursor-pointer select-none'>
@@ -27,7 +32,7 @@ const Contact = ({ header }) =>
                 <p>Phone: (123) 456-7890</p>
                 <p>Email: contact@Evara.com</p>
             </div>
-            <Button />
+            <MapButton />
         </div>
     )
 }
@@ -103,13 +108,34 @@ const contact = () =>
                         </div>
                     </div>
                 </div>
-                {/* HOW TO CONTACT US DIV */}
             </div>
             <Map />
-            <div className='grid sm:grid-cols-2 xl:grid-cols-3 lg:mx-10 mt-6 mb-16'>
+            {/* HOW TO CONTACT US DIV */}
+            <div className='grid ssm:space-y-11 sm:space-y-0 sm:grid-cols-2 xl:grid-cols-3 lg:mx-10 mt-6 mb-16'>
                 <Contact header="Office" />
                 <Contact header="Studio" />
                 <Contact header="Shop" />
+            </div>
+            {/* CONTACT FORM */}
+            <div className='lg:mx-24 xl:mx-48 space-y-5'>
+                <h1 className="text-primary font-semibold text-xl">Contact form</h1>
+                <h1 className='font-semibold text-primaryText text-3xl'>Drop Us a Line</h1>
+                <p className='text-secondaryText text-md'>Your email address will not be published. Required fields are marked *</p>
+                <div>
+                    <div className='ssm:space-y-6 md:space-y-0 md:grid md:grid-cols-2 gap-10'>
+                        <Input placeholder="First Name" size='lg' radius="md" leftSection={<AiOutlineUser size={24} />} />
+                        <Input placeholder="Your Email" size='lg' radius="md" leftSection={<MdOutlineMailOutline size={24} />} />
+                        <Input placeholder="Your Phone" size='lg' radius="md" leftSection={<BsTelephone size={24} />} />
+                        <Input placeholder="Subject" size='lg' radius="md" leftSection={<MdSubject size={24} />} />
+                    </div>
+                    <Textarea className='mt-10' minRows={10} maxRows={10} placeholder='Send a message' autosize />
+                    <button className="bg-primaryText text-white w-44 h-12 rounded-md mt-10">
+                        Send message
+                    </button>
+                </div>
+            </div>
+            <div className='my-10'>
+                <BottomHeroBanner />
             </div>
         </>
     )
