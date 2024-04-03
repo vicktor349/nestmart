@@ -7,14 +7,14 @@ const mapContainerStyle = {
     height: '50vh',
 };
 const center = {
-    lat: 7.2905715, // default latitude
-    lng: 80.6337262, // default longitude
+    lat: 37.42216,
+    lng: -122.08427,
 };
 
 const Map = () =>
 {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'YOUR_API_KEY',
+        googleMapsApiKey: "AIzaSyB6aiCZ6Ps8GSf75o5FlC62Ij4dzm7jTT4",
         libraries,
     });
 
@@ -27,9 +27,8 @@ const Map = () =>
     {
         return <div>Loading maps</div>;
     }
-
     return (
-        <div className=''>
+        <div className='mb-16'>
             <GoogleMap
                 mapContainerStyle={mapContainerStyle}
                 zoom={10}
