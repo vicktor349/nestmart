@@ -43,7 +43,7 @@ const Navbar = () =>
                                         <Link href="/about" className="text-primaryText block" style={{ color: activeColor("/about") }} onClick={closeMobileMenu}>About</Link>
                                     </li>
                                     <li>
-                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }} onClick={closeMobileMenu}>Shop</Link>
+                                        <Link href="/shop" className="text-primaryText block" style={{ color: activeColor("/shop") }} onClick={closeMobileMenu}>Shop</Link>
                                     </li>
                                     <li>
                                         <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }} onClick={closeMobileMenu}>Blog</Link>

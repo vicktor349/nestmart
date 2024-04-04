@@ -19,7 +19,7 @@ const CategoryNavbar = () =>
             </div>
             <Link href="/" className="font-semibold text-primaryText hover:text-[#7E7E7E] text-sm" style={{ color: activeColor("/") }}>Home</Link>
             <Link href="/about" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm' style={{ color: activeColor("/about") }}>About</Link>
-            <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Shop</Link>
+            <Link href="/shop" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm' style={{ color: activeColor("/shop") }}>Shop</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Vendors</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Mega menu</Link>
             <Link href="#" className='font-semibold text-primaryText hover:text-[#7E7E7E] text-sm'>Blog</Link>
