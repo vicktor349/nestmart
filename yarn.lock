@@ -100,6 +100,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@mantine/carousel@^7.7.1":
+  version "7.7.1"
+  resolved "https://registry.yarnpkg.com/@mantine/carousel/-/carousel-7.7.1.tgz#dbbd03c59a2ff41612abb6454481219111c2da31"
+
 "@mantine/core@^7.7.1":
   version "7.7.1"
   resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.7.1.tgz#1c294d53d409934a87fac7c578671353327a0b1a"
@@ -364,6 +368,16 @@ eastasianwidth@^0.2.0:
 electron-to-chromium@^1.4.668:
   version "1.4.692"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.692.tgz#82139d20585a4b2318a02066af7593a3e6bec993"
+
+embla-carousel-react@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.1.0.tgz#e716f4df7fd31f7ca3e59a3e011158167bc3c468"
+  dependencies:
+    embla-carousel "7.1.0"
+
+embla-carousel@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-7.1.0.tgz#c770dd3ade9285a97f5e3b6bbf705bc35ec0f9b5"
 
 emoji-regex@^8.0.0:
   version "8.0.0"
