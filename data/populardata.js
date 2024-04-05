@@ -1,5 +1,6 @@
 const popularData = [
     {
+        id: "1",
         tag: "Hot",
         imageUrl: "/images/popular/rice.png",
         category: "Snack",
@@ -10,6 +11,7 @@ const popularData = [
         changedPrice: "$32.8",
     },
     {
+        id: "2",
         tag: "Sale",
         imageUrl: "/images/popular/meatball.png",
         category: "Hodo Foods",

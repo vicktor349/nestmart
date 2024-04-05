@@ -29,7 +29,7 @@ const PopularProducts = () =>
                                         <section className='flex items-center mt-5 mb-8 text-md'>
                                             <p className='text-[#3BB77E] font-semibold'>{data.price}</p>
                                             <p className='text-[#ADADAD] ml-2 font-semibold'><s>{data.changedPrice}</s></p>
-                                            <Link href="/" className='text-primary text-sm bg-[#DEF9EC] flex items-center py-2 px-5 ml-auto rounded-[0.2rem]'>
+                                            <Link href={`/products/${data.id}`} className='text-primary text-sm bg-[#DEF9EC] flex items-center py-2 px-5 ml-auto rounded-[0.2rem]'>
                                                 <Image src={"/images/popular/cart.svg"} width={500} height={500} className='w-5 h-5' alt='Cart Logo' />
                                                 Add
                                             </Link>

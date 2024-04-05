@@ -10,14 +10,14 @@ const Layout = ({ children }) =>
         <div>
             <Navbar />
             <CategoryNavbar />
-            <BreadCrumb
+            {/* <BreadCrumb
                 homeElement="Home"
                 separator=">"
                 containerClasses="breadcrumbs"
                 listClasses="breadcrumb-item"
                 activeClasses="active"
                 capitalizeLinks={true}
-            />
+            /> */}
             {children}
             <Footer />
         </div>
