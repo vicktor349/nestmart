@@ -22,19 +22,19 @@ const HeroBanner = () =>
     }
 
     return (
-        <div className='lg:group w-full ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex justify-center items-center relative'>
+        <div className='group w-full ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex justify-center items-center relative'>
             <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className='w-full h-full rounded-2xl bg-center bg-cover duration-1000 relative'>
                 {/* LEFT ARROW */}
-                <div className='lg:hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
-                    <BsChevronCompactLeft onClick={prevSlide} size={30} />
+                <div className='ssm:hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
+                    <BsChevronCompactLeft onClick={prevSlide} />
                 </div>
                 {/* RIGHT ARROW */}
-                <div className='lg:hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
-                    <BsChevronCompactRight onClick={nextSlide} size={30} />
+                <div className='ssm:hidden z-[999] group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-10 text-xl rounded-full p-2 bg-black/20 text-white cursor-pointer '>
+                    <BsChevronCompactRight onClick={nextSlide} />
                 </div>
                 <div className='flex absolute items-center bottom-0 justify-center w-full'>
                     <div className="w-full ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex flex-col justify-center">
-                        <div className="ml-6 md:ml-24 md:text-left leading-10 h-72 w-fit">
+                        <div className="ml-6  sm:ml-24 md:ml-24 md:text-left leading-10 h-72 w-fit">
                             <p className="text-primaryText ssm:text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold -ml-1">{slides[currentIndex].text1}</p>
                             <p className="text-primaryText ssm:text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold -ml-1">{slides[currentIndex].text2}</p>
                             <p className="text-[#7E7E7E] mt-6 md:text-lg lg:text-xl">{slides[currentIndex].save}</p>
