@@ -22,6 +22,7 @@ const popularData = [
         changedPrice: "$55.8"
     },
     {
+        id: "3",
         tag: "New",
         imageUrl: "/images/popular/corn.png",
         category: "Snack",
@@ -32,6 +33,7 @@ const popularData = [
         changedPrice: "$52.8"
     },
     {
+        id: "4",
         tag: "-10%",
         imageUrl: "/images/popular/wings.png",
         category: "Vegetables",
@@ -42,6 +44,7 @@ const popularData = [
         changedPrice: "$19.8"
     },
     {
+        id: "5",
         tag: "-14%",
         imageUrl: "/images/popular/vegetables.png",
         category: "Pet Foods",
@@ -52,6 +55,7 @@ const popularData = [
         changedPrice: "$25.8"
     },
     {
+        id: "6",
         tag: "Hot",
         imageUrl: "/images/popular/rice.png",
         category: "Snack",
@@ -62,6 +66,7 @@ const popularData = [
         changedPrice: "$32.8",
     },
     {
+        id: "7",
         tag: "Sale",
         imageUrl: "/images/popular/meatball.png",
         category: "Hodo Foods",
@@ -72,6 +77,7 @@ const popularData = [
         changedPrice: "$55.8"
     },
     {
+        id: "8",
         tag: "New",
         imageUrl: "/images/popular/corn.png",
         category: "Snack",
@@ -82,6 +88,7 @@ const popularData = [
         changedPrice: "$52.8"
     },
     {
+        id: "9",
         tag: "-10%",
         imageUrl: "/images/popular/wings.png",
         category: "Vegetables",
@@ -92,6 +99,7 @@ const popularData = [
         changedPrice: "$19.8"
     },
     {
+        id: "10",
         tag: "-14%",
         imageUrl: "/images/popular/vegetables.png",
         category: "Pet Foods",
