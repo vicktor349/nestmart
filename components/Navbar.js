@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { CiMenuBurger } from "react-icons/ci";
+import { CgClose } from "react-icons/cg";
 
 const Navbar = () =>
 {
@@ -23,10 +25,10 @@ const Navbar = () =>
                 <div className="ssm:flex xl:hidden">
                     {
                         !isOpened ?
-                            <Image src={"/images/icons/burger.svg"} height={100} width={100}
-                                className='w-8 h-8 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
+                            <CiMenuBurger
+                                className='w-8 h-8 hover:cursor-pointer font-light' alt="burger icon" onClick={handleToggle} />
                             :
-                            <Image src={"/images/icons/close.svg"} height={100} width={100}
+                            <CgClose
                                 className='w-8 h-8 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
                     }
                 </div>
