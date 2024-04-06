@@ -5,10 +5,11 @@ const popularData = [
         imageUrl: "/images/popular/rice.png",
         category: "Snack",
         text: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
-        rating: "4.0",
+        rating: "2.5",
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: "12"
     },
     {
         id: "2",
@@ -19,7 +20,8 @@ const popularData = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: "30"
     },
     {
         id: "3",
@@ -27,10 +29,11 @@ const popularData = [
         imageUrl: "/images/popular/corn.png",
         category: "Snack",
         text: "Angie's Boomchickapop Sweet & Salty Kettle Corn",
-        rating: "4.0",
+        rating: "1.5",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: "10"
     },
     {
         id: "4",
@@ -38,10 +41,11 @@ const popularData = [
         imageUrl: "/images/popular/wings.png",
         category: "Vegetables",
         text: "Foster Farms Takeout Crispy Classic Buffalo Wings",
-        rating: "4.0",
+        rating: "5.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: "45"
     },
     {
         id: "5",
@@ -49,10 +53,11 @@ const popularData = [
         imageUrl: "/images/popular/vegetables.png",
         category: "Pet Foods",
         text: "Blue Diamond Almonds Lightly Salted Vegetables",
-        rating: "4.0",
+        rating: "3.5",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: "28"
     },
     {
         id: "6",
@@ -60,10 +65,11 @@ const popularData = [
         imageUrl: "/images/popular/rice.png",
         category: "Snack",
         text: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
-        rating: "4.0",
+        rating: "3.0",
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: "65"
     },
     {
         id: "7",
@@ -74,7 +80,8 @@ const popularData = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: "44"
     },
     {
         id: "8",
@@ -85,7 +92,8 @@ const popularData = [
         rating: "4.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: "19"
     },
     {
         id: "9",
@@ -96,7 +104,8 @@ const popularData = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: "200"
     },
     {
         id: "10",
@@ -107,7 +116,8 @@ const popularData = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: "156"
     }
 ]
 
