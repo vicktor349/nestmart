@@ -48,10 +48,10 @@ const Navbar = () =>
                                         <Link href="/shop" className="text-primaryText block" style={{ color: activeColor("/shop") }} onClick={closeMobileMenu}>Shop</Link>
                                     </li>
                                     <li>
-                                        <Link href="#" className="text-primaryText block" style={{ color: activeColor("#") }} onClick={closeMobileMenu}>Blog</Link>
+                                        <Link href="/contact" className="text-primaryText block" style={{ color: activeColor("/contact") }} onClick={closeMobileMenu}>Contact</Link>
                                     </li>
                                     <li>
-                                        <Link href="/contact" className="text-primaryText block" style={{ color: activeColor("/contact") }} onClick={closeMobileMenu}>Contact</Link>
+                                        <Link href="/signin" className="text-primaryText block" style={{ color: activeColor("/contact") }} onClick={closeMobileMenu}>Sign In</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -106,7 +106,7 @@ const Navbar = () =>
                     <div className='mb-1 ml-2'>
                         <section className='ssm:hidden xl:flex items-center'>
                             <Image src={"/images/icons/profile.svg"} width={20} height={20} alt="cycle icon" className="h-10 w-10" />
-                            <Link href="#" className="text-[#7E7E7E]">Account</Link>
+                            <Link href="/signin" className="text-[#7E7E7E]">SignIn</Link>
                         </section>
                     </div>
                 </div>
