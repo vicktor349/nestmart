@@ -1,6 +1,6 @@
-const popularData = [
+const bestSellingData = [
     {
-        id: 1,
+        id: "1",
         tag: "Save 35%",
         imageUrl: "/images/popular/rice.png",
         category: "Snack",
@@ -9,9 +9,10 @@ const popularData = [
         vendor: "NestFood",
         price: "$238.85",
         changedPrice: "$245.8",
+        review: 12
     },
     {
-        id: 2,
+        id: "2",
         tag: "Sale",
         imageUrl: "/images/popular/meatball.png",
         category: "Hodo Foods",
@@ -19,10 +20,11 @@ const popularData = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 90
     },
     {
-        id: 3,
+        id: "3",
         tag: "Best sale",
         imageUrl: "/images/popular/corn.png",
         category: "Snack",
@@ -30,11 +32,12 @@ const popularData = [
         rating: "2.5",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 24
     }
     ,
     {
-        id: 4,
+        id: "4",
         tag: "New",
         imageUrl: "/images/popular/corn.png",
         category: "Snack",
@@ -42,11 +45,12 @@ const popularData = [
         rating: "4.5",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 45
     }
     ,
     {
-        id: 5,
+        id: "5",
         tag: "-10%",
         imageUrl: "/images/popular/corn.png",
         category: "Snack",
@@ -54,9 +58,10 @@ const popularData = [
         rating: "5.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 53
     }
 ]
 
 
-export default popularData;
+export default bestSellingData;
