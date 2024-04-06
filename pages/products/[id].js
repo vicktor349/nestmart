@@ -3,9 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
-import { NumberInput } from '@mantine/core';
+import { NumberInput, Rating } from '@mantine/core';
 import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
+import RelatedProducts from "@/components/RelatedProducts";
 
 const ProductDetailPage = () =>
 {
@@ -32,8 +33,8 @@ const ProductDetailPage = () =>
                                 </div>
                                 <h3 className="text-primaryText text-4xl font-semibold">{product.text}</h3>
                                 <div className="flex items-center">
-                                    <AiFillStar className="" style={{ color: "#ffe234" }} />
-                                    <p className="text-secondaryText ml-24">(32 reviews)</p>
+                                    <Rating value={product.rating} readOnly fractions={2} />
+                                    <p className="text-secondaryText ml-24">({`${product.review}`} reviews)</p>
                                 </div>
                                 <div className="flex items-center">
                                     <p className="text-primary font-semibold text-4xl">{product.price}</p>
@@ -83,6 +84,7 @@ const ProductDetailPage = () =>
                 ) : (
                     <p>Product not found</p>
                 )}
+                <RelatedProducts />
             </div>
         </>
     );
