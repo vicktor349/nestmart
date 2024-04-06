@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 import { NumberInput } from '@mantine/core';
 import { BsCart2 } from "react-icons/bs";
+import Tab from "@/components/Tab";
 
 const ProductDetailPage = () =>
 {
@@ -16,14 +17,14 @@ const ProductDetailPage = () =>
     return (
         <>
             <Head>
-                <title>{`${product.text.toUpperCase()}`}</title>
+                <title>{product ? product.text.toUpperCase() : 'Product Detail'}</title>
             </Head>
             <div className="my-20">
                 {product ? (
                     <div className="mx-24">
                         <div className="grid grid-cols-2">
-                            <div className="border border-borderColor rounded-2xl w-fit ">
-                                <Image src={product.imageUrl} width={500} height={500} alt="product Image" className="h-[30rem] w-[30rem]" />
+                            <div className="border border-borderColor rounded-2xl w-fit">
+                                <Image src={product.imageUrl} width={2500} height={2500} alt="product Image" className="h-[30rem] w-[30rem]" priority />
                             </div>
                             <div className="space-y-4">
                                 <div className="bg-[#FDE0E9] w-24 text-center h-10 rounded-md">
@@ -63,20 +64,21 @@ const ProductDetailPage = () =>
                                         defaultValue={1}
                                         className="w-16"
                                     />
-                                    <p className=" text-white bg-primary rounded-md hover:cursor-pointer ml-4">
-                                        <p className="p-2 flex items-center">
+                                    <div className=" text-white bg-primary rounded-md hover:cursor-pointer ml-4">
+                                        <div className="p-2 flex items-center">
                                             <BsCart2 />
                                             <p className="ml-2"> Add to cart</p>
-                                        </p>
-                                    </p>
+                                        </div>
+                                    </div>
                                     <div className="border-borderColor border rounded-md ml-4">
-                                        <p className="p-2 hover:cursor-pointer">
+                                        <div className="p-2 hover:cursor-pointer">
                                             <AiOutlineHeart style={{ color: "#333333" }} className="text-xl" />
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <Tab />
                     </div>
                 ) : (
                     <p>Product not found</p>
