@@ -1,4 +1,3 @@
-import popularData from "@/data/populardata";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -8,13 +7,14 @@ import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
 import BottomHeroBanner from "@/components/BottomHeroBanner";
+import relatedproduct from "@/data/relatedproduct";
 
 const RelatedProductDetailPage = () =>
 {
     const router = useRouter();
     const { id } = router.query;
 
-    const product = popularData.find(prod => prod.id === id);
+    const product = relatedproduct.find(prod => prod.id === id);
 
     return (
         <>

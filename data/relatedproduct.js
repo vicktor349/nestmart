@@ -9,6 +9,7 @@ const relatedproduct = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 20
     },
     {
         id: "2",
@@ -19,7 +20,8 @@ const relatedproduct = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 54
     },
     {
         id: "3",
@@ -30,7 +32,8 @@ const relatedproduct = [
         rating: "5",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 24
     },
     {
         id: "4",
@@ -41,7 +44,8 @@ const relatedproduct = [
         rating: "1",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 63
     },
 ]
 
