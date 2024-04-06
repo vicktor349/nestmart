@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { CiMenuBurger } from "react-icons/ci";
 import { CgClose } from "react-icons/cg";
+import { BsCart2 } from "react-icons/bs";
 
 const Navbar = () =>
 {
@@ -50,9 +51,6 @@ const Navbar = () =>
                                     <li>
                                         <Link href="/contact" className="text-primaryText block" style={{ color: activeColor("/contact") }} onClick={closeMobileMenu}>Contact</Link>
                                     </li>
-                                    <li>
-                                        <Link href="/signin" className="text-primaryText block" style={{ color: activeColor("/contact") }} onClick={closeMobileMenu}>Sign In</Link>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -80,31 +78,17 @@ const Navbar = () =>
                     </section>
                 </div>
                 {/* THIRD SECTION OF DIV */}
-                <div className='flex items-center select-none ml-auto'>
-                    {/* compare div */}
-                    <div>
-                        <section className='ssm:hidden xl:flex items-center'>
-                            <Image src={"/images/icons/cycle.svg"} width={20} height={20} alt="cycle icon" className="h-7 w-7" />
-                            <div className="absolute ml-4 -mt-6 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">3</div>
-                            <Link className="text-[#7E7E7E] ml-3" href="#">Compare</Link>
-                        </section>
-                    </div>
-                    <div className='mx-4'>
-                        <section className='flex items-center'>
-                            <Image src={"/images/icons/love.svg"} width={100} height={100} alt="cycle icon" className="h-7 w-7" />
-                            <div className="absolute ml-4 -mt-6 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">6</div>
-                            <Link href="#" className="text-[#7E7E7E] ml-3 ssm:hidden xl:flex">Wishlist</Link>
-                        </section>
-                    </div>
+                <div className='flex items-center select-none ml-auto space-x-7'>
+                    {/* Cart div */}
                     <div>
                         <section className='flex items-center'>
-                            <Image src={"/images/icons/cart.svg"} width={20} height={20} alt="cycle icon" className="h-7 w-7" />
-                            <div className="absolute ml-4 -mt-6 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">2</div>
+                            <BsCart2 className="h-6 w-6" />
+                            <div className="absolute ml-3 -mt-5 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">2</div>
                             <Link href="#" className="text-[#7E7E7E] ml-3 ssm:hidden xl:flex">Cart</Link>
                         </section>
                     </div>
                     <div className='mb-1 ml-2'>
-                        <section className='ssm:hidden xl:flex items-center'>
+                        <section className='flex items-center'>
                             <Image src={"/images/icons/profile.svg"} width={20} height={20} alt="cycle icon" className="h-10 w-10" />
                             <Link href="/signin" className="text-[#7E7E7E]">SignIn</Link>
                         </section>
