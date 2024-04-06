@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import popularData from '@/data/populardata'
 import { useRouter } from 'next/router'
+import { Rating } from '@mantine/core'
 
 const PopularProducts = () =>
 {
@@ -25,12 +26,9 @@ const PopularProducts = () =>
                             <Image src={data.imageUrl} className="h-48 w-48 mx-auto mt-5 object-contain" alt='Product Image' width={500} height={500} />
                             <div className='mx-6'>
                                 <p className='text-sm text-[#ADADAD]'>{data.category}</p>
-                                <h3 className='text-primaryText font-semibold hover:cursor-pointer'>{data.text}</h3>
+                                <h3 className='text-primaryText font-semibold hover:cursor-pointer h-20'>{data.text}</h3>
                                 <section >
-                                    <section className='flex justify-between'>
-                                        <Image src={"/images/popular/rating.png"} alt='Rating' width={500} height={500} className='object-contain h-auto w-auto' />
-                                        <p className='text-[#B6B6B6] mt-2'>({data.rating})</p>
-                                    </section>
+                                    <Rating value={data.rating} readOnly fractions={2} />
                                     <p>By <span className='text-[#3BB77E] hover:cursor-pointer hover:underline'>{data.vendor}</span></p>
                                     <section className='flex items-center mt-5 mb-8 text-md'>
                                         <p className='text-[#3BB77E] font-semibold'>{data.price}</p>
