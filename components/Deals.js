@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import Link from 'next/link';
 import dealsData from '@/data/dealsData';
+import { Rating } from "@mantine/core"
 
 const Deals = () =>
 {
@@ -21,10 +22,7 @@ const Deals = () =>
                       <p className='text-sm text-[#ADADAD] w-full bg-white'>{data.category}</p>
                       <h3 className='text-primaryText font-semibold hover:cursor-pointer text-md'>{data.text}</h3>
                       <section >
-                        <section className='flex justify-between'>
-                          <Image src={"/images/popular/rating.png"} alt='Rating' width={500} height={500} className='object-contain h-auto w-auto bg-cover bg-center' />
-                          <p className='text-[#B6B6B6]'>({data.rating})</p>
-                        </section>
+                        <Rating value={data.rating} readOnly fractions={2} className='my-1' />
                         <p>By <span className='text-[#3BB77E] hover:cursor-pointer hover:underline'>{data.vendor}</span></p>
                         <section className='flex items-center mb-2 text-md'>
                           <p className='text-[#3BB77E] font-semibold'>{data.price}</p>
