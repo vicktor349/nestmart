@@ -23,7 +23,7 @@ const Layout = ({ children }) =>
                 capitalizeLinks={true}
             /> */}
             {children}
-            <Footer />
+            {!Displayed && <Footer />}
         </div>
     )
 }
