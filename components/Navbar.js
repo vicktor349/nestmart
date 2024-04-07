@@ -36,7 +36,7 @@ const Navbar = () =>
                 {/* MOBILE DRAWER */}
                 {
                     isOpened ?
-                        <div className='absolute mt-72 bg-white w-full'>
+                        <div className='absolute mt-64 bg-white w-full'>
                             <div className='mx-4 mb-6'>
                                 <ul className="space-y-5">
                                     <li>
