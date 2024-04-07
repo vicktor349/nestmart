@@ -19,6 +19,7 @@ const Navbar = () =>
     {
         setIsOpened(false)
     }
+
     return (
         <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 grid">
             <div className='flex items-center'>
