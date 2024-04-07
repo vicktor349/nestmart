@@ -24,10 +24,10 @@ const signup = () =>
                 <title>Nest | SignUp</title>
             </Head>
             <div className="flex justify-center items-center px-6 lg:px-8">
-                <div className="sm:w-full sm:max-w-sm mt-10">
+                <div className="sm:w-full sm:max-w-sm mt-4">
                     <h3 className='text-primaryText text-center font-semibold text-4xl mb-6'>Sign Up</h3>
                     <form className="space-y-6" action="#" method="POST">
-                        <div className='flex items-center space-x-6'>
+                        <div className='flex items-center justify-between'>
                             <div className="mt-2">
                                 <label htmlFor="firstname" className="block text-sm font-medium leading-6 text-gray-900">
                                     First Name
@@ -40,7 +40,7 @@ const signup = () =>
                                     className="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                                 />
                             </div>
-                            <div className="mt-2">
+                            <div className="mt-2 ml-2">
                                 <label htmlFor="lastname" className="block text-sm font-medium leading-6 text-gray-900">
                                     Last Name
                                 </label>
