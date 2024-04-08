@@ -84,7 +84,7 @@ const signin = () =>
                     <Divider label="Or continue with" labelPosition='center' className='font-semibold my-5' />
                     <div className="flex items-center justify-between space-x-6">
                         <Button text="Google" icon={<FcGoogle className='text-xl' />} />
-                        <Button text="Google" icon={<MdFacebook className='text-2xl' color='#0080ff' />} />
+                        <Button text="Facebook" icon={<MdFacebook className='text-2xl' color='#0080ff' />} />
                     </div>
                 </div>
             </div>
