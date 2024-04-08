@@ -2,7 +2,7 @@ import popularData from "@/data/populardata";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart } from "react-icons/ai";
 import { NumberInput, Rating } from '@mantine/core';
 import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
