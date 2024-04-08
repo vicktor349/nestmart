@@ -1,19 +1,18 @@
-import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import CategoryNavbar from './CategoryNavbar'
-import BreadCrumb from './BreadCrumb'
-import { useRouter } from 'next/router'
-
+import React from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import CategoryNavbar from './CategoryNavbar';
+import { useRouter } from 'next/router';
 
 const Layout = ({ children }) =>
 {
-    const router = useRouter()
-    const Displayed = router.pathname === "/signin" || router.pathname === "/signup";
+    const router = useRouter();
+    const Displayed = router.pathname !== '/signin' && router.pathname !== '/signup' && router.pathname !== '/404';
+
     return (
         <div>
             <Navbar />
-            {!Displayed && <CategoryNavbar />}
+            {Displayed && <CategoryNavbar />}
             {/* <BreadCrumb
                 homeElement="Home"
                 separator=">"
@@ -23,9 +22,9 @@ const Layout = ({ children }) =>
                 capitalizeLinks={true}
             /> */}
             {children}
-            {!Displayed && <Footer />}
+            {Displayed && <Footer />}
         </div>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;
