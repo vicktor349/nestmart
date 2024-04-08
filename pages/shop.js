@@ -4,11 +4,12 @@ import ShopProducts from '@/components/shop/ShopProducts'
 import { BiCategory } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { GrSort } from "react-icons/gr";
-import DealsOfTheDay from '@/components/shop/DealsOfTheDay';
 import BottomHeroBanner from '@/components/BottomHeroBanner';
+
 
 const shop = () =>
 {
+
     return (
         <>
             <Head>
@@ -21,7 +22,7 @@ const shop = () =>
                 </div>
                 {/* CATEGORY DIV */}
                 <div className='flex items-center py-5'>
-                    <h1 className='text-secondaryText'>We found <span className="text-primary">30</span> items for you!</h1>
+                    <h1 className='text-secondaryText ssm:hidden sm:flex'>We found <span className="text-primary">30</span> items for you!</h1>
                     <div className='ml-auto flex items-center space-x-3'>
                         <div className="border-secondaryText border border-solid text-secondaryText rounded-lg hover:cursor-pointer">
                             <div className='p-2 flex items-center'>
@@ -40,7 +41,6 @@ const shop = () =>
                     </div>
                 </div>
                 <ShopProducts />
-                <DealsOfTheDay />
                 <BottomHeroBanner />
             </div>
 
