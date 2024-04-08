@@ -2,9 +2,17 @@ import React from 'react'
 import shopproductdata from '@/data/shopproductdata'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 const ShopProducts = () =>
 {
+    const router = useRouter()
+
+    const route = (id) =>
+    {
+        router.push(`/fullproduct/${id}`)
+    }
     return (
         <div><div className='mt-6'>
             <div className='grid ssm:grid-cols-50 sm:grid-cols-100 gap-5 select-none'>
@@ -12,7 +20,7 @@ const ShopProducts = () =>
                     shopproductdata.map((data, id) =>
                     {
                         return (
-                            <div className='border border-1 border-[#ADADAD] rounded-xl hover:shadow-xl hover:cursor-pointer' key={id}>
+                            <div onClick={() => route(data.id)} className='border border-1 border-[#ADADAD] rounded-xl hover:shadow-xl hover:cursor-pointer' key={id}>
                                 <p className="bg-[#F74B81] text-white w-20 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl" >{data.tag}</p>
                                 <Image src={data.imageUrl} className="h-48 w-48 mx-auto mt-5 object-contain" alt='Product Image' width={500} height={500} />
                                 <div className='mx-6'>
