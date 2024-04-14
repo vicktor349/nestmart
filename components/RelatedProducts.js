@@ -14,13 +14,13 @@ const RelatedProducts = () =>
     }
 
     return (
-        <div className='mx-24 mt-12 mb-12'>
+        <div className='lg:mx-24 mt-12 mb-12'>
             <Tabs defaultValue="first" color='#3BB77E'>
                 <Tabs.List>
                     <Tabs.Tab value="first" className='font-semibold text-primaryText text-2xl'>Related Products</Tabs.Tab>
                 </Tabs.List>
             </Tabs>
-            <div className='grid grid-cols-4 gap-2 mt-20'>
+            <div className='grid grid-cols-100 gap-2 mt-20'>
                 {relatedproduct.map((data, id) =>
                 {
                     return (
