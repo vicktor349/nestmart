@@ -9,6 +9,7 @@ const shopproductdata = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 21
     },
     {
         id: "2",
@@ -19,7 +20,8 @@ const shopproductdata = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 54
     },
     {
         id: "3",
@@ -30,7 +32,8 @@ const shopproductdata = [
         rating: "3.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 15
     },
     {
         id: "4",
@@ -41,7 +44,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 93
     },
     {
         id: "5",
@@ -52,7 +56,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: 81
     },
     {
         id: "6",
@@ -64,6 +69,7 @@ const shopproductdata = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 52
     },
     {
         id: "7",
@@ -74,7 +80,8 @@ const shopproductdata = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 95
     },
     {
         id: "8",
@@ -85,7 +92,8 @@ const shopproductdata = [
         rating: "3.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 75
     },
     {
         id: "9",
@@ -96,7 +104,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 24
     },
     {
         id: "10",
@@ -107,7 +116,8 @@ const shopproductdata = [
         rating: "2.5",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: 84
     },
     {
         id: "11",
@@ -119,6 +129,7 @@ const shopproductdata = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 59
     },
     {
         id: "12",
@@ -129,7 +140,8 @@ const shopproductdata = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 23
     },
     {
         id: "13",
@@ -140,7 +152,8 @@ const shopproductdata = [
         rating: "1.5",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 74
     },
     {
         id: "14",
@@ -151,7 +164,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 35
     },
     {
         id: "15",
@@ -162,7 +176,8 @@ const shopproductdata = [
         rating: "4.5",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: 24
     },
     {
         id: "16",
@@ -174,6 +189,7 @@ const shopproductdata = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 49
     },
     {
         id: "17",
@@ -184,7 +200,8 @@ const shopproductdata = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 59
     },
     {
         id: "18",
@@ -195,7 +212,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 39
     },
     {
         id: "19",
@@ -206,7 +224,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 14
     },
     {
         id: "20",
@@ -217,7 +236,8 @@ const shopproductdata = [
         rating: "4.5",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: 458
     },
     {
         id: "21",
@@ -229,6 +249,7 @@ const shopproductdata = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 34
     },
     {
         id: "22",
@@ -239,7 +260,8 @@ const shopproductdata = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 59
     },
     {
         id: "23",
@@ -250,7 +272,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 65
     },
     {
         id: "24",
@@ -261,7 +284,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 25
     },
     {
         id: "25",
@@ -272,7 +296,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: 35
     },
     {
         id: "26",
@@ -284,6 +309,7 @@ const shopproductdata = [
         vendor: "NestFood",
         price: "$28.85",
         changedPrice: "$32.8",
+        review: 654
     },
     {
         id: "27",
@@ -294,7 +320,8 @@ const shopproductdata = [
         rating: "3.5",
         vendor: "Stouffer",
         price: "$52.85",
-        changedPrice: "$55.8"
+        changedPrice: "$55.8",
+        review: 62
     },
     {
         id: "28",
@@ -305,7 +332,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "StarKist",
         price: "$48.85",
-        changedPrice: "$52.8"
+        changedPrice: "$52.8",
+        review: 54
     },
     {
         id: "29",
@@ -316,7 +344,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$17.85",
-        changedPrice: "$19.8"
+        changedPrice: "$19.8",
+        review: 87
     },
     {
         id: "30",
@@ -327,7 +356,8 @@ const shopproductdata = [
         rating: "4.0",
         vendor: "NestFood",
         price: "$23.85",
-        changedPrice: "$25.8"
+        changedPrice: "$25.8",
+        review: 43
     }
 ]
 
