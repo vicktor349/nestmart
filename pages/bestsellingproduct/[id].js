@@ -22,16 +22,16 @@ const BestSellingProductPage = () =>
             </Head>
             <div className="my-20">
                 {product ? (
-                    <div className="mx-24">
-                        <div className="grid grid-cols-2">
-                            <div className="border border-borderColor rounded-2xl w-fit">
-                                <Image src={product.imageUrl} width={2500} height={2500} alt="product Image" className="h-[30rem] w-[30rem]" priority />
+                    <div className="2xl:mx-24">
+                        <div className="grid lg:grid-cols-2 lg:gap-x-2 xl:gap-x-5">
+                            <div className="border border-borderColor rounded-2xl w-fit h-fit ssm:mx-auto lg:mx-0 ssm:mb-12 lg:mb-0">
+                                <Image src={product.imageUrl} width={500} height={500} alt="product Image" className="object-contain bg-contain bg-center ssm:w-72 ssm:h-72 lg:w-[30rem] lg:h-[30rem]" priority />
                             </div>
-                            <div className="space-y-4">
+                            <div className="ssm:space-y-4 lg:space-y-2 xl:space-y-4 ssm:w-80 lg:w-fit">
                                 <div className="bg-[#FDE0E9] w-24 text-center h-10 rounded-md">
                                     <p className="text-[#F74B81] p-2 font-semibold">Sale Off</p>
                                 </div>
-                                <h3 className="text-primaryText text-4xl font-semibold">{product.text}</h3>
+                                <h3 className="text-primaryText ssm:text-xl md:text-4xl font-semibold">{product.text}</h3>
                                 <div className="flex items-center">
                                     <Rating value={product.rating} readOnly fractions={2} />
                                     <p className="text-secondaryText ml-24">({`${product.review}`} reviews)</p>
@@ -48,7 +48,7 @@ const BestSellingProductPage = () =>
                                     Aliquam rem officia, corrupti reiciendis minima nisi modi, quasi,
                                     odio minus dolore impedit fuga eum eligendi.
                                 </p>
-                                <div className="text-secondaryText flex items-center space-x-5 select-nonex">
+                                <div className="text-secondaryText flex items-center ssm:space-x-1 lg:space-x-5 select-none">
                                     <p>
                                         Size / Weight:
                                     </p>
