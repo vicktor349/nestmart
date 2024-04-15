@@ -1,5 +1,6 @@
 @tailwind base;
 @import '@mantine/core/styles.css';
+@import '@mantine/carousel/styles.css';
 @tailwind components;
 @tailwind utilities;
 
