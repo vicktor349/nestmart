@@ -16,7 +16,7 @@ const PopularProducts = () =>
 
     return (
         <div className='md:mt-6'>
-            <h2 className='text-3xl font-semibold text-primaryText ssm:py-4 md:py-12'>Popular Products</h2>
+            <h2 className='text-3xl font-semibold text-primaryText ssm:py-6 md:py-12'>Popular Products</h2>
             <div className='grid ssm:grid-cols-50 sm:grid-cols-100 gap-5 select-none'>
                 {popularData.map((data, id) =>
                 {
