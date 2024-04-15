@@ -8,7 +8,7 @@ const HeroBanner = () =>
     return (
         <Carousel
             loop
-            className='text-white ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex justify-center relative md:mt-12'
+            className='text-white ssm:h-[20rem] sm:h-[25rem] md:h-[27rem] lg:h-[33rem] border-transparent rounded-3xl flex items-center justify-center relative md:mt-12'
         >
             <Carousel.Slide style={{ backgroundImage: `url(${slides[0].url})` }} className='bg-cover bg-center bg-no-repeat rounded-3xl'>
                 <div className='flex bottom-0 justify-center w-full'>
