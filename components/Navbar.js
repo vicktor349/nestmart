@@ -28,10 +28,10 @@ const Navbar = () =>
                     {
                         !isOpened ?
                             <CiMenuBurger
-                                className='w-8 h-8 hover:cursor-pointer font-light' alt="burger icon" onClick={handleToggle} />
+                                className='w-6 h-6 mb-1 hover:cursor-pointer font-light' alt="burger icon" onClick={handleToggle} />
                             :
                             <CgClose
-                                className='w-8 h-8 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
+                                className='w-6 h-6 hover:cursor-pointer' alt="burger icon" onClick={handleToggle} />
                     }
                 </div>
                 {/* MOBILE DRAWER */}
@@ -81,14 +81,14 @@ const Navbar = () =>
                 {/* THIRD SECTION OF DIV */}
                 <div className='flex items-center select-none ml-auto space-x-7'>
                     {/* Cart div */}
-                    <div>
+                    <div className='mb-1 -mr-4'>
                         <section className='flex items-center'>
                             <BsCart2 className="h-6 w-6" />
                             <div className="absolute ml-3 -mt-5 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">2</div>
-                            <Link href="#" className="text-[#7E7E7E] ml-3 ssm:hidden xl:flex">Cart</Link>
+                            <Link href="#" className="text-[#7E7E7E] ssm:hidden xl:flex">Cart</Link>
                         </section>
                     </div>
-                    <div className='mb-1 ml-2'>
+                    <div className='mb-1'>
                         <section className='flex items-center'>
                             <Image src={"/images/icons/profile.svg"} width={20} height={20} alt="cycle icon" className="h-10 w-10" />
                             <Link href="/signin" className="text-[#7E7E7E]">SignIn</Link>
