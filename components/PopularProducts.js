@@ -1,18 +1,44 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import popularData from '@/data/populardata'
 import { useRouter } from 'next/router'
 import { Rating } from '@mantine/core'
+import supabase from '@/config/supabase'
 
 const PopularProducts = () =>
 {
     const router = useRouter()
+    const [products, setProducts] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     const route = (id) =>
     {
         router.push(`/products/${id}`)
     }
+    useEffect(() =>
+    {
+        getProducts();
+    }, []);
+
+    async function getProducts()
+    {
+        try
+        {
+            const { data, error } = await supabase.from('popularproduct').select();
+            if (error)
+            {
+                console.error("Error fetching data:", error);
+            } else
+            {
+                console.log(data);
+            }
+        } catch (err)
+        {
+            console.error("Unexpected error:", err);
+        }
+    }
+
 
     return (
         <div className='md:mt-6'>
