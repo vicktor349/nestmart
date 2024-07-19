@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import bestsellingData from '@/data/bestsellingData'
 import { Rating } from '@mantine/core'
 import { useRouter } from 'next/router'
 import supabase from '@/config/supabase'
