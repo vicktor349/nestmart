@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -6,41 +7,84 @@ import { NumberInput, Rating } from '@mantine/core';
 import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
-import shopproductdata from "@/data/shopproductdata";
+import supabase from "@/config/supabase";
 
 const fullProductDetailPage = () =>
 {
+    const [shopProduct, setShopProduct] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
     const router = useRouter();
     const { id } = router.query;
 
-    const product = shopproductdata.find(prod => prod.id === id);
+    useEffect(() =>
+    {
+        if (id)
+        {
+            getProductDetails(id);
+        }
+    }, [id]);
+
+    async function getProductDetails(productId)
+    {
+        const { data, error } = await supabase
+            .from('shopproductdata')
+            .select()
+            .eq('id', productId)
+            .single();
+
+        if (error)
+        {
+            console.error(error);
+        } else
+        {
+            setShopProduct(data);
+        }
+        setIsLoading(false);
+    }
+
+
+
+    useEffect(() =>
+    {
+    }, [shopProduct]);
+
+    if (isLoading || !shopProduct)
+    {
+        return (
+            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
+                <div className="loader">
+                </div>
+            </div>
+        )
+    }
+
 
     return (
         <>
             <Head>
-                <title>{product ? product.text : 'Product Detail'}</title>
+                <title>{shopProduct ? shopProduct.text : 'Product Detail'}</title>
             </Head>
             <div className="my-20">
-                {product ? (
+                {shopProduct ? (
                     <div className="2xl:mx-24">
                         <div className="grid lg:grid-cols-2 lg:gap-x-2 xl:gap-x-5">
                             <div className="border border-borderColor rounded-2xl w-fit h-fit ssm:mx-auto lg:mx-0 ssm:mb-12 lg:mb-0">
-                                <Image src={product.imageUrl} width={500} height={500} alt="product Image" className="object-contain bg-contain bg-center ssm:w-72 ssm:h-72 lg:w-[30rem] lg:h-[30rem]" priority />
+                                <Image src={shopProduct.imageurl} width={500} height={500} alt="product Image" className="object-contain bg-contain bg-center ssm:w-72 ssm:h-72 lg:w-[30rem] lg:h-[30rem]" priority />
                             </div>
                             <div className="ssm:space-y-4 lg:space-y-2 xl:space-y-4 ssm:w-80 lg:w-fit">
                                 <div className="bg-[#FDE0E9] w-24 text-center h-10 rounded-md">
                                     <p className="text-[#F74B81] p-2 font-semibold">Sale Off</p>
                                 </div>
-                                <h3 className="text-primaryText ssm:text-xl md:text-4xl font-semibold">{product.text}</h3>
+                                <h3 className="text-primaryText ssm:text-xl md:text-4xl font-semibold">{shopProduct.text}</h3>
                                 <div className="flex items-center">
-                                    <Rating value={product.rating} readOnly fractions={2} />
-                                    <p className="text-secondaryText ml-24">({`${product.review}`} reviews)</p>
+                                    <Rating value={shopProduct.rating} readOnly fractions={2} />
+                                    <p className="text-secondaryText ml-24">({`${shopProduct.review}`} reviews)</p>
                                 </div>
                                 <div className="flex items-center">
-                                    <p className="text-primary font-semibold text-4xl">{product.price}</p>
+                                    <p className="text-primary font-semibold text-4xl">{`$ ${shopProduct.price}`}</p>
                                     <div className="ml-2">
                                         <p className="text-[#FDC040] text-sm">26% Off</p>
-                                        <p className="text-secondaryText text-md"><s>{product.changedPrice}</s></p>
+                                        <p className="text-secondaryText text-md"><s>{`$ ${shopProduct.changedprice}`}</s></p>
                                     </div>
                                 </div>
                                 <p className="text-secondaryText">
