@@ -21,7 +21,7 @@ const Navbar = () =>
     }
 
     return (
-        <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 grid">
+        <nav className="bg-[rgb(255,255,255)] z-[9999] sticky top-0 h-24 grid shadow-xl">
             <div className='flex items-center'>
                 {/* burger icon */}
                 <div className="ssm:flex xl:hidden">
