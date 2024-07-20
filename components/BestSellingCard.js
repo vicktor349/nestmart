@@ -25,7 +25,7 @@ const BestSellingCard = () =>
     {
         try
         {
-            const { data, error } = await supabase.from('bestsellingdata').select();
+            const { data, error } = await supabase.from('bestsellingproduct').select();
             if (error)
             {
                 console.error("Error fetching data:", error);

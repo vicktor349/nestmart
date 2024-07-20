@@ -28,7 +28,7 @@ const BestSellingProductPage = () =>
     async function getProductDetails(productId)
     {
         const { data, error } = await supabase
-            .from('bestsellingdata')
+            .from('bestsellingproduct')
             .select()
             .eq('id', productId)
             .single();
