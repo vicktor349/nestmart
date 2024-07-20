@@ -24,7 +24,7 @@ const shop = () =>
     {
         try
         {
-            const { data, error } = await supabase.from('shopproductdata').select();
+            const { data, error } = await supabase.from('fullproduct').select();
             if (error)
             {
                 console.error("Error fetching data:", error);
