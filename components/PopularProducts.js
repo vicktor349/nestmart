@@ -24,7 +24,7 @@ const PopularProducts = () =>
     {
         try
         {
-            const { data, error } = await supabase.from('popularproduct').select();
+            const { data, error } = await supabase.from('products').select();
             if (error)
             {
                 console.error("Error fetching data:", error);
