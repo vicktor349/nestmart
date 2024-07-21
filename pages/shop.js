@@ -56,18 +56,18 @@ const shop = () =>
                 <title>Nest | Shop</title>
             </Head>
             {/* SHOP BANNER */}
-            <div className='mb-28'>
-                <div className="bg-[url('/images/shopbanner/shopBanner.png')] bg-cover bg-center h-64 flex items-center mb-16 rounded-xl">
-                    <p className="text-primaryText text-5xl font-semibold ml-12">Shop</p>
+            <div className='sm:mb-28'>
+                <div className="bg-[url('/images/shopbanner/shopBanner.png')] bg-cover bg-center ssm:h-32 sm:h-64 flex items-center sm:mb-16 rounded-xl">
+                    <p className="text-primaryText ssm:text-xl sm:text-5xl font-semibold ml-12">Shop</p>
                 </div>
                 {/* CATEGORY DIV */}
-                <div className='flex items-center py-5'>
+                <div className='flex items-center sm:py-5'>
                     <h1 className='text-secondaryText ssm:hidden sm:flex'>We found <span className="text-primary mx-1"> {shopData.length} </span> items for you!</h1>
-                    <div className='ml-auto flex items-center space-x-3'>
+                    <div className='ml-auto flex items-center space-x-3 ssm:py-5 sm:py-0'>
                         <div className="border-secondaryText border border-solid text-secondaryText rounded-lg hover:cursor-pointer">
                             <div className='p-2 flex items-center'>
                                 <BiCategory />
-                                <p>Show: 50</p>
+                                <p>Show: {shopData.length}</p>
                                 <IoIosArrowDown />
                             </div>
                         </div>
