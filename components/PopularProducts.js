@@ -72,7 +72,7 @@ const PopularProducts = () =>
                                 width={500}
                                 height={500}
                             />
-                            <div className='sssms:mx-2 sm:mx-3'>
+                            <div className='ssm:mx-2 sm:mx-3'>
                                 <p className='text-sm text-[#ADADAD]'>{data.category}</p>
                                 <h3 className='text-primaryText sm:font-semibold hover:cursor-pointer sm:h-12 ssm:text-sm sm:text-base sssms:h-10 ssm:h-10 ssms:h-10 line-clamp-2'>
                                     {data.text}
