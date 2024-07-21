@@ -14,7 +14,9 @@ module.exports = {
         "secondaryText": "#7E7E7E"
       },
       screens: {
-        "ssm": "360px"
+        "ssm": "360px",
+        "sssms": "384px",
+        "ssms": "480px",
       },
       gridTemplateColumns: {
         "200": "repeat(auto-fit, minmax(170px, 1fr))",
