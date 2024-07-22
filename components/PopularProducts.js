@@ -59,7 +59,7 @@ const PopularProducts = () =>
                     return (
                         <div
                             onClick={() => route(data.id)}
-                            className='border border-1 border-[#ADADAD] rounded-xl sm:hover:shadow-xl hover:cursor-pointer'
+                            className='rounded-xl shadow-md hover:cursor-pointer'
                             key={id}
                         >
                             <p className="bg-[#F74B81] text-white w-20 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl">

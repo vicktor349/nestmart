@@ -57,7 +57,7 @@ const BestSellingCard = () =>
                     sellingData.map((data, id) =>
                     {
                         return (
-                            <div onClick={() => route(data.id)} className='border border-1 border-[#ADADAD] rounded-xl sm:hover:shadow-xl hover:cursor-pointer' key={id}>
+                            <div onClick={() => route(data.id)} className='rounded-lg shadow-md hover:cursor-pointer' key={id}>
                                 <p className="bg-primary text-white w-24 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl" >{data.tag}</p>
                                 <Image src={data.imageurl} className="ssm:h-32 ssm:w-32 sm:h-48 sm:w-48 mx-auto object-contain" alt='Product Image' width={500} height={500} />
                                 <div className='mx-3'>
