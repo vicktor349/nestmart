@@ -152,7 +152,7 @@ const Signup = () =>
                                     onChange={handleChange}
                                     className='text-primaryText'
                                 />
-                                <a href="#" className="font-semibold text-primaryText ml-auto">
+                                <a href="/resetpassword" className="font-semibold text-primaryText ml-auto">
                                     Forgot password?
                                 </a>
                             </div>
