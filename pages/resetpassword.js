@@ -42,11 +42,11 @@ const ResetPassword = () =>
                 <title>Nest | Reset Password</title>
             </Head>
             <div className='flex justify-center items-center'>
-                <div className='grid place-items-center w-[30rem] border px-10 py-28 space-y-5'>
+                <div className='grid place-items-center ssm:w-full ssms:w-96 sm:w-[30rem] sm:border ssms:px-3 ssm:py-20 ssms:py-28 sm:px-10 space-y-5'>
                     <div className='border border-black border-solid rounded-full w-32 h-32 flex items-center justify-center'><HiOutlineLockClosed size={72} /></div>
                     <p>Trouble loggin in?</p>
                     <p className='text-center'>Enter your email and we'll send you a link to get back into your account.</p>
-                    <form className='w-96 space-y-5' onSubmit={handleSubmit}>
+                    <form className='w-full ssms:w-96 space-y-5' onSubmit={handleSubmit}>
                         <div className="mt-2">
                             <input
                                 id="email"
