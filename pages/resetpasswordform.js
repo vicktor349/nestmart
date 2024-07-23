@@ -55,11 +55,11 @@ const resetpasswordform = () =>
                 <title>Nest | Reset Password</title>
             </Head>
             <div className='flex justify-center items-center'>
-                <div className='grid place-items-center border w-[30rem] px-10 py-28 space-y-5'>
+                <div className='grid place-items-center ssm:w-full sm:w-[30rem] sm:border ssms:px-3 ssm:py-20 ssms:py-28 sm:px-10 space-y-5'>
                     <div className='border border-black border-solid rounded-full w-32 h-32 flex items-center justify-center'><HiOutlineLockClosed size={72} /></div>
                     <p>Create A Strong Password</p>
-                    <p className='text-gray-400'>Your password must be at least 6 characters</p>
-                    <form className='w-96 space-y-5' onSubmit={handleSubmit}>
+                    <p className='text-gray-400 ssm:text-sm sssms:text-base'>Your password must be at least 6 characters</p>
+                    <form className='w-full ssms:w-96 space-y-5' onSubmit={handleSubmit}>
                         <div className="mt-2">
                             <input
                                 required
