@@ -1,4 +1,4 @@
-import { Checkbox, Divider } from '@mantine/core';
+import { Checkbox, Divider, Loader } from '@mantine/core';
 import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
@@ -9,6 +9,7 @@ import { notifications } from '@mantine/notifications';
 
 const Signup = () =>
 {
+    const [isSubmitting, setIsSubmitting] = useState(false)
     const [formData, setFormData] = useState({
         firstname: '',
         lastname: '',
@@ -32,6 +33,7 @@ const Signup = () =>
 
     const handleSubmit = async (e) =>
     {
+        setIsSubmitting(true)
         e.preventDefault();
 
         const { firstname, lastname, email, password } = formData;
@@ -61,6 +63,7 @@ const Signup = () =>
         {
             notifications.show({ title: "Error", message: err, color: "red" })
         }
+        setIsSubmitting(true)
     };
 
     const Button = ({ text, icon }) =>
@@ -160,9 +163,10 @@ const Signup = () =>
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                disabled={isSubmitting}
+                                className="flex w-full justify-center rounded-md bg-primary h-10 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
-                                Sign Up
+                                {isSubmitting ? <Loader size={16} color='white' /> : " Sign Up"}
                             </button>
                         </div>
                     </form>
