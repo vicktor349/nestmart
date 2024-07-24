@@ -41,6 +41,7 @@ const SignIn = () =>
             notifications.show({ title: "Error", message: error.message, color: "red" })
         } else
         {
+            setTimeout(() => { }, 4000)
             notifications.show({ title: "Success", message: "Login Successful", color: "#3BB77E" })
         }
     };
@@ -103,7 +104,7 @@ const SignIn = () =>
                         <div>
                             <button
                                 type="submit"
-                                className="flex w-full justify-center rounded-md bg-primary h-10 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="flex w-full justify-center items-center rounded-md bg-primary h-10 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 disabled={loading}
                             >
                                 {loading ? <Loader size={16} color='white' /> : 'Sign in'}
