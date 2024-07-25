@@ -1,6 +1,6 @@
 import { Checkbox, Divider, Loader } from '@mantine/core';
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { MdFacebook } from "react-icons/md";
 import Link from 'next/link';
