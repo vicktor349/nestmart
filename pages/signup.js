@@ -81,7 +81,7 @@ const Signup = () =>
                 <title>Nest | SignUp</title>
             </Head>
             <div className="flex justify-center items-center px-6 lg:px-8">
-                <div className="sm:w-full sm:max-w-lg mt-4">
+                <div className="sm:w-full sm:max-w-lg shadow-xl p-10 rounded-lg mt-4">
                     <h3 className='text-primaryText text-center font-semibold text-4xl mb-6'>Sign Up</h3>
                     <form className="space-y-6" onSubmit={handleSubmit} method="POST">
                         <div className='grid grid-cols-2 gap-2'>
@@ -164,7 +164,7 @@ const Signup = () =>
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="flex w-full justify-center rounded-md bg-primary h-10 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="flex w-full justify-center items-center rounded-md bg-primary h-10 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 {isSubmitting ? <Loader size={16} color='white' /> : " Sign Up"}
                             </button>
