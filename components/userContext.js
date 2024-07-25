@@ -8,7 +8,7 @@ export const UserProvider = ({ children }) =>
 {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const { push } = useRouter()
+    const { replace } = useRouter()
 
     useEffect(() =>
     {
@@ -40,6 +40,7 @@ export const UserProvider = ({ children }) =>
 
     const logout = async () =>
     {
+        replace("/")
         await supabase.auth.signOut();
         setUser(null);
     };
