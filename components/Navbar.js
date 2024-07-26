@@ -1,11 +1,17 @@
-import Image from 'next/image';
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { CiMenuBurger } from 'react-icons/ci';
+import { CiLogout, CiMenuBurger } from 'react-icons/ci';
 import { CgClose } from 'react-icons/cg';
-import { BsCart2 } from 'react-icons/bs';
+import { BsBox2, BsCart2 } from 'react-icons/bs';
 import SearchDatabase from './SearchDatabase';
+import { useUser } from './userContext';
+import { FiUser } from "react-icons/fi";
+import { Avatar, Menu } from '@mantine/core';
+import { GoMail } from "react-icons/go";
+import { GrFavorite } from 'react-icons/gr';
+import { RiArrowDownSLine, RiSearch2Line } from "react-icons/ri";
 
 const debounce = (func, delay) =>
 {
@@ -27,6 +33,7 @@ const debounce = (func, delay) =>
 
 const Navbar = () =>
 {
+    const { user, logout } = useUser();
     const [isOpened, setIsOpened] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
@@ -143,8 +150,9 @@ const Navbar = () =>
                         />
                     )}
                 </div>
+                {/* MOBILE VIEW */}
                 {isOpened && (
-                    <div className="absolute mt-72 bg-white w-52 rounded-lg -ml-4" ref={mobileMenuRef}>
+                    <div className="absolute mt-72 bg-white w-52 rounded-lg -ml-4 shadow-lg" ref={mobileMenuRef}>
                         <div className="ml-9 my-4">
                             <ul className="space-y-5">
                                 {['/', '/about', '/shop', '/contact'].map((path) => (
@@ -186,13 +194,7 @@ const Navbar = () =>
                         <p className="hover:cursor-pointer font-bold text-sm text-primary">
                             All Categories
                         </p>
-                        <Image
-                            src="/images/icons/downwardarrow.svg"
-                            height={10}
-                            width={10}
-                            alt="Downward Arrow"
-                            className="w-4 h-4 mt-1"
-                        />
+                        <RiArrowDownSLine color='#3bb77e' className="w-4 h-4 mt-1" />
                         <form onSubmit={handleSearch} className="flex">
                             <input
                                 type="text"
@@ -202,13 +204,7 @@ const Navbar = () =>
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
                             <button type="submit">
-                                <Image
-                                    src="/images/icons/search.svg"
-                                    width={20}
-                                    height={20}
-                                    alt="Search Icon"
-                                    className="hover:cursor-pointer ml-1"
-                                />
+                                <RiSearch2Line color="#3bb773" className='hover:cursor-pointer w-5 h-5' />
                             </button>
                         </form>
                     </section>
@@ -234,23 +230,65 @@ const Navbar = () =>
                             <div className="absolute ml-3 -mt-5 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">
                                 2
                             </div>
-                            <Link href="#" className="text-[#7E7E7E] ssm:hidden xl:flex">
+                            <Link href="#" className="text-[#7E7E7E] ssm:hidden xl:flex ml-2">
                                 Cart
                             </Link>
                         </section>
                     </div>
-                    <div className="mb-1">
+                    <div className="mb-1 ml-5">
                         <section className="flex items-center">
-                            <Image
-                                src="/images/icons/profile.svg"
-                                width={20}
-                                height={20}
-                                alt="Profile icon"
-                                className="h-10 w-10"
-                            />
-                            <Link href="/signin" className="text-[#7E7E7E]">
-                                SignIn
-                            </Link>
+                            {
+                                user ?
+                                    <>
+                                        <Menu trigger="click-hover" withArrow arrowPosition="side" transitionProps={{ duration: 150 }}>
+                                            <Menu.Target>
+                                                <div className='flex items-center space-x-3 sm:hover:bg-gray-100 sm:rounded-md px-3 py-2 hover:cursor-pointer'>
+                                                    <Avatar src='' className='hover:cursor-pointer' />
+                                                    <p className='ssm:hidden sm:flex'>Hi, {user.user_metadata.firstname}</p>
+                                                </div>
+                                            </Menu.Target>
+                                            <Menu.Dropdown className='mt-6 py-3'>
+                                                <Menu.Item className='w-40 hover:bg-gray-200 text-[#222]'>
+                                                    <div className='flex items-center space-x-4 py-1'>
+                                                        <FiUser size={18} />
+                                                        <p className='text-md'>My Account</p>
+                                                    </div>
+                                                </Menu.Item>
+                                                <Menu.Item className='w-40 hover:bg-gray-200'>
+                                                    <div className='flex items-center space-x-4 py-1'>
+                                                        <BsBox2 size={18} />
+                                                        <p className='text-md'>Orders</p>
+                                                    </div>
+                                                </Menu.Item>
+                                                <Menu.Item className='w-40 hover:bg-gray-200'>
+                                                    <div className='flex items-center space-x-4 py-1'>
+                                                        <GoMail size={18} />
+                                                        <p className='text-md'>Inbox</p>
+                                                    </div>
+                                                </Menu.Item>
+                                                <Menu.Item className='w-40 hover:bg-gray-200'>
+                                                    <div className='flex items-center space-x-4 py-1'>
+                                                        <GrFavorite size={18} />
+                                                        <p className='text-md'>Saved Items</p>
+                                                    </div>
+                                                </Menu.Item>
+                                                <Menu.Item onClick={logout} className='w-40 hover:cursor-pointer hover:bg-red-200'>
+                                                    <div className='flex items-center space-x-4 py-1'>
+                                                        <CiLogout size={18} color="#d62626" />
+                                                        <p className='text-md text-red-600'>Logout</p>
+                                                    </div>
+                                                </Menu.Item>
+                                            </Menu.Dropdown>
+                                        </Menu>
+                                    </>
+                                    :
+                                    <>
+                                        <FiUser className='w-6 h-6' />
+                                        <Link href="/signin" className="text-[#7E7E7E]">
+                                            SignIn
+                                        </Link>
+                                    </>
+                            }
                         </section>
                     </div>
                 </div>
