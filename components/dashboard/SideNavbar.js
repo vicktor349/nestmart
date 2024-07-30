@@ -2,14 +2,12 @@ import React from 'react'
 import { BiMessageDetail } from 'react-icons/bi'
 import { CiMail } from 'react-icons/ci'
 import { FiUser } from 'react-icons/fi'
-import { GoHome } from 'react-icons/go'
 import { PiHeart, PiShoppingCartSimple } from 'react-icons/pi'
 import { RiMoneyDollarCircleFill } from 'react-icons/ri'
 
 const SideNavbar = ({ activeComponent, setActiveComponent }) =>
 {
     const menuItems = [
-        { location: "Dashboard", icon: <GoHome size={24} />, name: "Dashboard" },
         { location: "Profile", icon: <FiUser size={24} />, name: "Profile" },
         { location: "Orders", icon: <PiShoppingCartSimple size={24} />, name: "Orders" },
         { location: "Inbox", icon: <CiMail size={24} />, name: "Inbox" },
