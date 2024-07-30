@@ -12,7 +12,7 @@ const Dashboard = () =>
 {
     const { user, loading } = useUser();
     const router = useRouter();
-    const [activeComponent, setActiveComponent] = useState("Dashboard")
+    const [activeComponent, setActiveComponent] = useState("Profile")
     useEffect(() =>
     {
         if (router.isReady)
@@ -39,8 +39,6 @@ const Dashboard = () =>
     {
         switch (activeComponent)
         {
-            case "Dashboard":
-                return <AccountDashboard setActiveComponent={handleSetActiveComponent} />
             case "Profile":
                 return <Profile setActiveComponent={handleSetActiveComponent} />
         }
@@ -88,13 +86,13 @@ const Dashboard = () =>
                 <title>Nest | Dashboard</title>
             </Head>
             <div className='lg:flex'>
-                <div className='absolute left-0 top-24'>
-                    <div className='lg:w-80 lg:flex justify-center shadow-xl fixed ssm:hidden h-screen'>
+                <div className='absolute left-0'>
+                    <div className='lg:w-80 lg:flex justify-center shadow-xl fixed top-20 ssm:hidden h-screen'>
                         <SideNavbar setActiveComponent={handleSetActiveComponent} activeComponent={activeComponent} />
                     </div>
                 </div>
                 <div className='lg:flex-1 lg:ml-56 w-full'>
-                    <div className='absolute left-96'>
+                    <div className='left-80'>
                         {renderComponent()}
                     </div>
                 </div>
