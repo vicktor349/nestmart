@@ -13,14 +13,36 @@ const Dashboard = () =>
     const { user, loading } = useUser();
     const router = useRouter();
     const [activeComponent, setActiveComponent] = useState("Dashboard")
+    useEffect(() =>
+    {
+        if (router.isReady)
+        {
+            const { component } = router.query
+            if (component)
+            {
+                setActiveComponent(component)
+            }
+        }
+    }, [router.isReady, router.query])
+    const handleSetActiveComponent = (component) =>
+    {
+        setActiveComponent(component)
+        router.push({
+            pathname: '/dashboard',
+            query: { component }
+        },
+            undefined,
+            { shallow: true }
+        )
+    }
     const renderComponent = () =>
     {
         switch (activeComponent)
         {
             case "Dashboard":
-                return <AccountDashboard setActiveComponent={activeComponent} />
+                return <AccountDashboard setActiveComponent={handleSetActiveComponent} />
             case "Profile":
-                return <Profile setActiveComponent={activeComponent} />
+                return <Profile setActiveComponent={handleSetActiveComponent} />
         }
     }
 
@@ -68,7 +90,7 @@ const Dashboard = () =>
             <div className='lg:flex'>
                 <div className='absolute left-0 top-24'>
                     <div className='lg:w-80 lg:flex justify-center shadow-xl fixed ssm:hidden h-screen'>
-                        <SideNavbar setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
+                        <SideNavbar setActiveComponent={handleSetActiveComponent} activeComponent={activeComponent} />
                     </div>
                 </div>
                 <div className='lg:flex-1 lg:ml-56 w-full'>
