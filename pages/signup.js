@@ -6,10 +6,14 @@ import { MdFacebook } from "react-icons/md";
 import Link from 'next/link';
 import supabase from '@/config/supabase';
 import { notifications } from '@mantine/notifications';
+import { useUser } from '@/components/userContext';
+import { Router, useRouter } from 'next/router';
 
 const Signup = () =>
 {
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const { replace } = useRouter()
+    const { user } = useUser()
     const [formData, setFormData] = useState({
         firstname: '',
         lastname: '',
@@ -27,9 +31,10 @@ const Signup = () =>
         });
     };
 
-
-
-
+    if (user)
+    {
+        replace("/dashboard")
+    }
 
     const handleSubmit = async (e) =>
     {
