@@ -9,7 +9,7 @@ const SideNavbar = ({ activeComponent, setActiveComponent }) =>
 {
     const menuItems = [
         { location: "Profile", icon: <FiUser size={24} />, name: "Profile" },
-        { location: "Orders", icon: <PiShoppingCartSimple size={24} />, name: "Orders" },
+        { location: "Order", icon: <PiShoppingCartSimple size={24} />, name: "Order" },
         { location: "Inbox", icon: <CiMail size={24} />, name: "Inbox" },
         { location: "Reviews", icon: <BiMessageDetail size={24} />, name: "Reviews" },
         { location: "SavedItems", icon: <PiHeart size={24} />, name: "Saved Items" },
