@@ -177,6 +177,7 @@ const Profile = () =>
                     </div>
                 </div>
             </div>
+
             <div className='flex justify-end mt-10'>
                 <button
                     type="submit"
