@@ -29,7 +29,7 @@ const SignIn = () =>
     {
         e.preventDefault();
         setLoading(true);
-        const { user, error } = await supabase.auth.signInWithPassword({
+        const { error } = await supabase.auth.signInWithPassword({
             email,
             password,
         });
