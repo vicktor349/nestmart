@@ -7,6 +7,7 @@ import Head from 'next/head';
 import SideNavbar from '@/components/dashboard/SideNavbar';
 import Profile from '@/components/dashboard/Profile';
 import Order from '@/components/dashboard/Order';
+import Inbox from '@/components/dashboard/Inbox';
 
 const Dashboard = () =>
 {
@@ -43,6 +44,8 @@ const Dashboard = () =>
                 return <Profile setActiveComponent={handleSetActiveComponent} />
             case "Order":
                 return <Order setActiveComponent={handleSetActiveComponent} />
+            case "Inbox":
+                return <Inbox setActiveComponent={handleSetActiveComponent} />
         }
     }
 
