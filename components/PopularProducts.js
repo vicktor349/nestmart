@@ -54,13 +54,13 @@ const PopularProducts = () =>
         <div className='md:mt-6'>
             <h2 className='text-3xl font-semibold text-primaryText ssm:py-6 md:py-12'>Popular Products</h2>
             <div className='grid sssms:grid-cols-2 sm:grid-cols-100 ssm:gap-2 sm:gap-5 select-none'>
-                {products.map((data, id) =>
+                {products.map((data) =>
                 {
                     return (
                         <div
                             onClick={() => route(data.id)}
                             className='rounded-xl shadow-md hover:cursor-pointer'
-                            key={id}
+                            key={data.id}
                         >
                             <p className="bg-[#F74B81] text-white w-20 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl">
                                 {data.tag}

@@ -21,10 +21,10 @@ const RelatedProducts = () =>
                 </Tabs.List>
             </Tabs>
             <div className='grid grid-cols-100 gap-2 mt-20'>
-                {relatedproduct.map((data, id) =>
+                {relatedproduct.map((data) =>
                 {
                     return (
-                        <div onClick={() => route(data.id)} className='border border-1 border-[#ADADAD] rounded-xl hover:shadow-xl hover:cursor-pointer' key={id}>
+                        <div onClick={() => route(data.id)} className='border border-1 border-[#ADADAD] rounded-xl hover:shadow-xl hover:cursor-pointer' key={data.id}>
                             <p className="bg-[#F74B81] text-white w-20 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl" >{data.tag}</p>
                             <Image src={data.imageUrl} className="h-48 w-48 mx-auto mt-5 object-contain" alt='Product Image' width={500} height={500} />
                             <div className='mx-6'>

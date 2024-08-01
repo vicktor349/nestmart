@@ -7,10 +7,10 @@ const Offers = () =>
 
     return (
         <div className='grid grid-cols-100 gap-5 my-24'>
-            {Offerdata.map((data, id) =>
+            {Offerdata.map((data) =>
             {
                 return (
-                    <div key={id} className='bg-[#F4F6FA] w-full rounded-md'>
+                    <div key={data.id} className='bg-[#F4F6FA] w-full rounded-md'>
                         <div className='flex items-center px-1 py-2'>
                             <Image src={data.imageUrl} alt='offer image' width={100} height={100} className='h-14 w-14 object-contain' />
                             <div className='ml-4'>
