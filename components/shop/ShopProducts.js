@@ -15,13 +15,13 @@ const ShopProducts = ({ shopData }) =>
         <div><div className='sm:mt-6'>
             <div className='grid sssms:grid-cols-2 sm:grid-cols-100 ssm:gap-2 sm:gap-5 select-none'>
                 {
-                    shopData.map((data, id) =>
+                    shopData.map((data) =>
                     {
                         return (
                             <div
                                 onClick={() => route(data.id)}
                                 className='border border-1 border-[#ADADAD] rounded-xl sm:hover:shadow-xl hover:cursor-pointer'
-                                key={id}
+                                key={data.id}
                             >
                                 <p className="bg-[#F74B81] text-white w-20 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl">
                                     {data.tag}
