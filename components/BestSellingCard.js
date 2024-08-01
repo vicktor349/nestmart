@@ -54,10 +54,10 @@ const BestSellingCard = () =>
         <div>
             <div className='grid sssms:grid-cols-2 sm:grid-cols-100 ssm:gap-2 sm:gap-5 select-none'>
                 {
-                    sellingData.map((data, id) =>
+                    sellingData.map((data) =>
                     {
                         return (
-                            <div onClick={() => route(data.id)} className='rounded-lg shadow-md hover:cursor-pointer' key={id}>
+                            <div onClick={() => route(data.id)} className='rounded-lg shadow-md hover:cursor-pointer' key={data.id}>
                                 <p className="bg-primary text-white w-24 py-[0.11rem] text-center rounded-ss-xl rounded-ee-xl" >{data.tag}</p>
                                 <Image src={data.imageurl} className="ssm:h-32 ssm:w-32 sm:h-48 sm:w-48 mx-auto object-contain" alt='Product Image' width={500} height={500} />
                                 <div className='mx-3'>
