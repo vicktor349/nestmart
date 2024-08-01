@@ -11,10 +11,10 @@ const Deals = () =>
       <h2 className='text-3xl font-semibold text-primaryText'>Deals of The Day</h2>
       <div className='grid grid-cols-100 gap-5 select-none mt-3'>
         {
-          dealsData.map((data, id) =>
+          dealsData.map((data) =>
           {
             return (
-              <div key={id}>
+              <div key={data.id}>
                 <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain bg-cover bg-center" alt='Product Image' width={500} height={500} />
                 <div className='mx-auto w-64 bg-white shadow-md relative -mt-24 rounded-2xl'>
                   <div className='px-2 py-1'>
