@@ -249,16 +249,16 @@ const Navbar = () =>
                                             </Menu.Target>
                                             <Menu.Dropdown className='mt-6 py-3'>
                                                 <Menu.Item className='w-40 hover:bg-gray-200 text-[#222]'>
-                                                    <Link href="/dashboard" className='flex items-center space-x-4 py-1'>
+                                                    <Link href="/dashboard?component=Profile" className='flex items-center space-x-4 py-1'>
                                                         <FiUser size={18} />
                                                         <p className='text-md'>My Profile</p>
                                                     </Link>
                                                 </Menu.Item>
                                                 <Menu.Item className='w-40 hover:bg-gray-200'>
-                                                    <div className='flex items-center space-x-4 py-1'>
+                                                    <Link href="dashboard?component=Order" className='flex items-center space-x-4 py-1'>
                                                         <BsBox2 size={18} />
                                                         <p className='text-md'>Orders</p>
-                                                    </div>
+                                                    </Link>
                                                 </Menu.Item>
                                                 <Menu.Item className='w-40 hover:bg-gray-200'>
                                                     <div className='flex items-center space-x-4 py-1'>
