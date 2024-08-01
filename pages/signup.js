@@ -7,7 +7,8 @@ import Link from 'next/link';
 import supabase from '@/config/supabase';
 import { notifications } from '@mantine/notifications';
 import { useUser } from '@/components/userContext';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
+import Button from '@/components/Button';
 
 const Signup = () =>
 {
@@ -71,14 +72,6 @@ const Signup = () =>
         setIsSubmitting(true)
     };
 
-    const Button = ({ text, icon }) =>
-    {
-        return (
-            <div className='text-primaryText bg-white border-borderColor border rounded-md w-44 h-12 flex items-center justify-center text-center hover:cursor-pointer select-none space-x-3'>
-                {icon} <p className='font-semibold text-primaryText'>{text}</p>
-            </div>
-        )
-    }
 
     return (
         <>
