@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Checkbox, Divider, Loader } from '@mantine/core';
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { MdFacebook } from "react-icons/md";
 import supabase from '@/config/supabase';
