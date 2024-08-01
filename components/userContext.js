@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
 import supabase from '@/config/supabase';
 import { useRouter } from 'next/router';
 
@@ -8,7 +8,7 @@ export const UserProvider = ({ children }) =>
 {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const { replace } = useRouter()
+    const { replace } = useRouter();
 
     useEffect(() =>
     {
@@ -40,13 +40,15 @@ export const UserProvider = ({ children }) =>
 
     const logout = async () =>
     {
-        replace("/")
+        replace("/");
         await supabase.auth.signOut();
         setUser(null);
     };
 
+    const value = useMemo(() => ({ user, loading, logout }), [user, loading, logout]);
+
     return (
-        <UserContext.Provider value={{ user, loading, logout }}>
+        <UserContext.Provider value={value}>
             {children}
         </UserContext.Provider>
     );
