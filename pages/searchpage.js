@@ -59,8 +59,8 @@ const SearchPage = () =>
             <div className='my-24'>
                 <ul>
                     <div className='grid ssm:grid-cols-50 sm:grid-cols-100 gap-5 select-none'>
-                        {searchResults.map((data, id) => (
-                            <SearchResult key={id} data={data} />
+                        {searchResults.map((data) => (
+                            <SearchResult key={data.id} data={data} />
                         ))}
                     </div>
                 </ul>

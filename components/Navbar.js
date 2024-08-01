@@ -211,8 +211,8 @@ const Navbar = () =>
                     {searchResults.length > 0 && (
                         <div className="absolute bg-white border border-primary w-full mt-12 rounded-md shadow-lg z-50 max-h-72 overflow-y-auto">
                             <ul>
-                                {searchResults.map((result, index) => (
-                                    <li key={index} className="p-2 hover:bg-gray-200 cursor-pointer">
+                                {searchResults.map((result) => (
+                                    <li key={result.id} className="p-2 hover:bg-gray-200 cursor-pointer">
                                         <Link href={`/${result.table}/${result.id}`} onClick={handleResultClick} className='flex items-center space-x-5'>
                                             <Image src={result.imageurl} width={50} height={50} className='bg-transparent' alt='Images' />
                                             <p className='text-sm'>{result.text}</p>
