@@ -1,6 +1,5 @@
 import supabase from '@/config/supabase'
 import { Divider } from '@mantine/core'
-import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 
 const Order = () =>

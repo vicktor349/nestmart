@@ -20,7 +20,8 @@ const Profile = () =>
             input = input.slice(0, 10)
         }
 
-        setPhoneNumber(input);
+        setPhoneNumber(input)
+        setProfileData({ ...profileData })
     };
     return (
         <div className='mb-32'>

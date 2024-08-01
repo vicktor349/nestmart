@@ -1,5 +1,5 @@
 import Map from '@/components/contact/Map'
-import { Input, Textarea, Button } from '@mantine/core';
+import { Input, Textarea } from '@mantine/core';
 import Head from 'next/head'
 import React from 'react'
 import { TbMapPin } from "react-icons/tb";
