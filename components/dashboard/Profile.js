@@ -177,54 +177,6 @@ const Profile = () =>
                     </div>
                 </div>
             </div>
-            <div>
-                <div className='mt-6'>
-                    <label htmlFor="address" className="block font-medium leading-6 text-primaryText">
-                        Current Password
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id=""
-                            name=""
-                            type=""
-                            required
-                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className='mt-6'>
-                    <label htmlFor="address" className="block font-medium leading-6 text-primaryText">
-                        New Password
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id=""
-                            name=""
-                            type=""
-                            required
-                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className='mt-6'>
-                    <label htmlFor="address" className="block font-medium leading-6 text-primaryText">
-                        Confirm New Password
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id=""
-                            name=""
-                            type=""
-                            required
-                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
-                        />
-                    </div>
-                </div>
-            </div>
             <div className='flex justify-end mt-10'>
                 <button
                     type="submit"
