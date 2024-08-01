@@ -4,9 +4,9 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { Loader } from '@mantine/core';
 import Head from 'next/head';
-import AccountDashboard from '@/components/dashboard/Dashboard';
 import SideNavbar from '@/components/dashboard/SideNavbar';
 import Profile from '@/components/dashboard/Profile';
+import Order from '@/components/dashboard/Order';
 
 const Dashboard = () =>
 {
@@ -41,6 +41,8 @@ const Dashboard = () =>
         {
             case "Profile":
                 return <Profile setActiveComponent={handleSetActiveComponent} />
+            case "Order":
+                return <Order setActiveComponent={handleSetActiveComponent} />
         }
     }
 
