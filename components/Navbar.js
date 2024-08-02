@@ -261,10 +261,10 @@ const Navbar = () =>
                                                     </Link>
                                                 </Menu.Item>
                                                 <Menu.Item className='w-40 hover:bg-gray-200'>
-                                                    <div className='flex items-center space-x-4 py-1'>
+                                                    <Link href="/dashboard?component=Inbox" className='flex items-center space-x-4 py-1'>
                                                         <GoMail size={18} />
                                                         <p className='text-md'>Inbox</p>
-                                                    </div>
+                                                    </Link>
                                                 </Menu.Item>
                                                 <Menu.Item className='w-40 hover:bg-gray-200'>
                                                     <div className='flex items-center space-x-4 py-1'>
