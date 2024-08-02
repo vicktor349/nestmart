@@ -14,7 +14,7 @@ const Layout = ({ children }) =>
         <div>
             <ScrollToTop />
             <Navbar />
-            <div className='ssm:mx-4 sm:mx-8 md:mx-16 lg:mx-20 xl:mx-24 2xl:mx-48 font-Montserrat max-w-screen-2xl'>
+            <div className='ssm:mx-4 sm:mx-8 md:mx-16 lg:mx-20 xl:mx-24 2xl:mx-48 max-w-screen-2xl'>
                 {Displayed && <CategoryNavbar />}
                 {children}
                 {Displayed && <Footer />}
