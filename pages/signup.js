@@ -78,8 +78,8 @@ const Signup = () =>
             <Head>
                 <title>Nest | SignUp</title>
             </Head>
-            <div className="flex justify-center items-center px-6 lg:px-8">
-                <div className="sm:w-full sm:max-w-lg shadow-xl p-10 rounded-lg mt-4">
+            <div className="flex justify-center items-center px-6 lg:px-8 w-full">
+                <div className="ssm:max-w-[27rem] sm:max-w-lg sm:shadow-xl sm:p-10 rounded-lg sm:mt-4">
                     <h3 className='text-primaryText text-center font-semibold text-4xl mb-6'>Sign Up</h3>
                     <form className="space-y-6" onSubmit={handleSubmit} method="POST">
                         <div className='grid grid-cols-2 gap-2'>

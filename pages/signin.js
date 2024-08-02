@@ -55,8 +55,8 @@ const SignIn = () =>
             <Head>
                 <title>Nest | SignIn</title>
             </Head>
-            <div className="flex justify-center items-center px-6 lg:px-8">
-                <div className="sm:w-full sm:max-w-md mt-10 shadow-xl rounded-lg p-10">
+            <div className="flex justify-center items-center px-6 lg:px-8 w-full">
+                <div className="ssm:max-w-[27rem] sm:max-w-md ssm:mt-5 sm:mt-10 sm:shadow-xl rounded-lg sm:p-10">
                     <h3 className='text-primaryText text-center font-semibold text-4xl mb-6'>Sign In</h3>
                     <form className="space-y-6" onSubmit={handleSignIn}>
                         <div>
