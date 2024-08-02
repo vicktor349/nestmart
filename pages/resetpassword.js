@@ -3,8 +3,7 @@ import Head from 'next/head'
 import React, { useState } from 'react'
 import { showNotification } from '@mantine/notifications'
 import { HiOutlineLockClosed } from "react-icons/hi2";
-import { Divider, Loader } from '@mantine/core'
-import Link from 'next/link'
+import { Loader } from '@mantine/core'
 
 const ResetPassword = () =>
 {
@@ -42,9 +41,9 @@ const ResetPassword = () =>
                 <title>Nest | Reset Password</title>
             </Head>
             <div className='flex justify-center items-center'>
-                <div className='grid place-items-center ssm:w-full ssms:w-96 sm:w-[30rem] sm:border ssms:px-3 ssm:py-20 ssms:py-28 sm:px-10 space-y-5'>
-                    <div className='border border-black border-solid rounded-full w-32 h-32 flex items-center justify-center'><HiOutlineLockClosed size={72} /></div>
-                    <p>Trouble loggin in?</p>
+                <div className='grid place-items-center ssm:w-full ssms:w-[26rem] sm:w-[30rem] sm:shadow-xl ssms:px-3 ssm:py-12 ssms:py-28 sm:px-10 space-y-5'>
+                    <div className='border border-black border-solid rounded-full sm:w-32 ssm:h-20 ssm:w-20 sm:h-32 flex items-center justify-center'><HiOutlineLockClosed className='ssm:w-10 ssm:h-10 sm:w-20 sm:h-20' /></div>
+                    <p className='font-semibold text-2xl'>Trouble loggin in?</p>
                     <p className='text-center'>Enter your email and we'll send you a link to get back into your account.</p>
                     <form className='w-full ssms:w-96 space-y-5' onSubmit={handleSubmit}>
                         <div className="mt-2">
@@ -70,11 +69,6 @@ const ResetPassword = () =>
                             </button>
                         </div>
                     </form>
-                    <Divider my="xs" label="OR" labelPosition="center" />
-                    <Link className='hover:text-primaryText' href="/signup">Create new account</Link>
-                    <Link href="/signin" className="flex w-fit justify-center rounded-md bg-primary px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >
-                        Back to Login
-                    </Link>
                 </div>
             </div>
         </>
