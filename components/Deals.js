@@ -15,7 +15,7 @@ const Deals = () =>
           {
             return (
               <div key={data.id}>
-                <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain bg-cover bg-center" alt='Product Image' width={500} height={500} />
+                <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain bg-cover bg-center" alt='Product Image' width={500} height={500} priority />
                 <div className='mx-auto w-64 bg-white shadow-md relative -mt-24 rounded-2xl'>
                   <div className='px-2 py-1'>
                     <p className='text-sm text-[#ADADAD] w-full bg-white'>{data.category}</p>
