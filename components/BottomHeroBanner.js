@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
+import { HiOutlineMail } from 'react-icons/hi';
 
 const BottomHeroBanner = () =>
 {
@@ -10,7 +10,7 @@ const BottomHeroBanner = () =>
                 <p className="text-primaryText ssm:text-xl sm:text-2xl lg:text-3xl xl:text-5xl font-semibold -ml-1">needs from our shop</p>
                 <p className="text-[#7E7E7E] mt-6 md:text-lg lg:text-xl">Start You'r Daily Shopping with <span className="text-primary hover:underline hover:cursor-pointer">Nest Mart</span></p>
                 <div className="bg-white mt-4 md:mt-6 ssm:w-[20rem] sm:w-full h-16 rounded-full flex items-center">
-                    <Image src={"/images/icons/email.svg"} alt="email icon" width="20" height="20" className="w-6 h-6 ssm:mx-2 sm:mx-5" priority />
+                    <HiOutlineMail className="w-6 h-6 ssm:mx-2 sm:mx-5 text-gray-500" />
                     <input type="text" className="flex-grow rounded-full text-[#9ca3af] ssm:px-2 sm:px-4 outline-none" placeholder="Your email address" />
                     <button className="bg-primary h-16 rounded-full text-white ssm:hidden sm:block sm:w-24 md:w-32 ml-2 md:ml-0">Subscribe</button>
                 </div>
