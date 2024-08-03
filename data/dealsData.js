@@ -1,5 +1,6 @@
 const dealsData = [
     {
+        "id": 1,
         imageUrl: "/images/deals/quinoa.png",
         text: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
         rating: "2.5",
@@ -8,6 +9,7 @@ const dealsData = [
         changedPrice: "$33.8"
     },
     {
+        "id": 2,
         imageUrl: "/images/deals/lemon.png",
         text: "Perdue Simply Smart Organics Gluten Free",
         rating: "5.0",
@@ -16,6 +18,7 @@ const dealsData = [
         changedPrice: "$26.8"
     },
     {
+        "id": 3,
         imageUrl: "/images/deals/greenpea.png",
         text: "Signature Wood-Fired Mushroom and Caramelized",
         rating: "3.0",
@@ -24,6 +27,7 @@ const dealsData = [
         changedPrice: "$13.8"
     },
     {
+        "id": 4,
         imageUrl: "/images/deals/raspberry.png",
         text: "Simply Lemonade with Raspberry Juice",
         rating: "3.5",
