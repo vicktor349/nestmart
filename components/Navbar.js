@@ -229,7 +229,7 @@ const Navbar = () =>
                 <div className="flex items-center select-none ml-auto space-x-7">
                     <div className="relative mb-1 -mr-4">
                         <section className="flex items-center">
-                            <BsCart2 className="h-6 w-6" />
+                            <Link href="/cart"><BsCart2 className="h-6 w-6" /></Link>
                             <div className="absolute ml-3 -mt-5 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">
                                 {cartItems.length}
                             </div>
