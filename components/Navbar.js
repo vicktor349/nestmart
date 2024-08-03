@@ -12,6 +12,7 @@ import { Avatar, Menu } from '@mantine/core';
 import { GoMail } from "react-icons/go";
 import { GrFavorite } from 'react-icons/gr';
 import { RiArrowDownSLine, RiSearch2Line } from "react-icons/ri";
+import { useCart } from './CartContext';
 
 const debounce = (func, delay) =>
 {
@@ -39,6 +40,7 @@ const Navbar = () =>
     const [searchResults, setSearchResults] = useState([]);
     const { pathname, push } = useRouter();
     const searchContainerRef = useRef(null);
+
 
     const activeColor = useCallback(
         (p) => (pathname === p ? '#3BB77E' : '#253D4E'),
@@ -131,6 +133,7 @@ const Navbar = () =>
         };
     }, [isOpened]);
 
+    const { cartItems } = useCart()
 
     return (
         <nav className="bg-white z-9999 sticky top-0 h-24 grid shadow-xl mb-10 z-[9999]">
@@ -228,9 +231,9 @@ const Navbar = () =>
                         <section className="flex items-center">
                             <BsCart2 className="h-6 w-6" />
                             <div className="absolute ml-3 -mt-5 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">
-                                2
+                                {cartItems.length}
                             </div>
-                            <Link href="#" className="text-[#7E7E7E] ssm:hidden xl:flex ml-2">
+                            <Link href="/cart" className="text-[#7E7E7E] ssm:hidden xl:flex ml-2">
                                 Cart
                             </Link>
                         </section>
