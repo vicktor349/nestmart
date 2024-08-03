@@ -31,3 +31,47 @@ body, html{
         clip-path: inset(0 -1ch 0 0)
     }
 }
+
+
+
+/* Hide default number input arrows for WebKit browsers */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.custom-number-input {
+  position: relative;
+  width: 5rem; 
+}
+
+.custom-number-input input[type="number"] {
+  padding-right: 2.5rem;
+}
+
+.custom-number-input button {
+  position: absolute;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.custom-number-input button:hover {
+  color: #1a202c;
+}
+
+.custom-number-input button.up {
+  top: 0.25rem;
+}
+
+.custom-number-input button.down {
+  bottom: 0.25rem;
+}
