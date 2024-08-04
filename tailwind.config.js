@@ -17,6 +17,7 @@ module.exports = {
         "ssm": "360px",
         "sssms": "384px",
         "ssms": "480px",
+        iiixl: "1792px"
       },
       gridTemplateColumns: {
         "200": "repeat(auto-fit, minmax(170px, 1fr))",
