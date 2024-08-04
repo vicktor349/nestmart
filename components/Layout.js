@@ -8,7 +8,7 @@ import ScrollToTop from './ScrollToTop';
 const Layout = ({ children }) =>
 {
     const router = useRouter();
-    const Displayed = router.pathname !== '/signin' && router.pathname !== '/signup' && router.pathname !== '/404' && router.pathname !== '/resetpassword' && router.pathname !== '/resetpasswordform' && router.pathname !== '/dashboard';
+    const Displayed = router.pathname !== '/signin' && router.pathname !== '/signup' && router.pathname !== '/404' && router.pathname !== '/resetpassword' && router.pathname !== '/resetpasswordform' && router.pathname !== '/dashboard' && router.pathname !== '/verifyemail';
     const Display = router.pathname !== '/cart'
     return (
         <div>
