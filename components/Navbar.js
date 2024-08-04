@@ -247,7 +247,7 @@ const Navbar = () =>
                                             <Menu.Target>
                                                 <div className='flex items-center space-x-3 sm:hover:bg-gray-100 sm:rounded-md px-3 py-2 hover:cursor-pointer'>
                                                     <Avatar src='' className='hover:cursor-pointer' />
-                                                    <p className='ssm:hidden sm:flex'>Hi, {user.user_metadata.firstname}</p>
+                                                    <p className=''>Hi, {user.user_metadata.firstname}</p>
                                                 </div>
                                             </Menu.Target>
                                             <Menu.Dropdown className='mt-6 py-3'>
