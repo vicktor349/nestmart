@@ -22,7 +22,7 @@ const SideNavbar = ({ activeComponent, setActiveComponent }) =>
                     <li
                         key={item.location}
                         onClick={() => setActiveComponent(item.location)}
-                        className={`flex items-center select-none font-semibold space-x-4 hover:cursor-pointer w-64 py-5 text-[#666] hover:rounded-md text-sm ${activeComponent === item.location ? 'bg-primary/25 rounded-md duration-300 ease-in' : 'hover:bg-primary/25'}`}
+                        className={`flex items-center select-none font-semibold space-x-4 hover:cursor-pointer lg:w-48 xl:w-56 2xl:w-64 py-5 text-[#666] hover:rounded-md text-sm ${activeComponent === item.location ? 'bg-primary/25 rounded-md duration-300 ease-in' : 'hover:bg-primary/25'}`}
                     >
                         <p className={`ml-5 ${activeComponent === item.location ? 'text-primary rounded-md duration-300 ease-in' : ''}`}>{item.icon}</p>
                         <p className={`${activeComponent === item.location ? 'text-primary rounded-md duration-300 ease-in' : ''}`}>{item.name}</p>
