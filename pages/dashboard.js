@@ -92,11 +92,11 @@ const Dashboard = () =>
             </Head>
             <div className='lg:flex'>
                 <div className='absolute left-0'>
-                    <div className='lg:w-80 lg:flex justify-center shadow-xl fixed top-20 ssm:hidden h-screen'>
+                    <div className='lg:w-56 xl:w-64 2xl:w-72 lg:flex justify-center shadow-xl fixed top-20 ssm:hidden h-screen'>
                         <SideNavbar setActiveComponent={handleSetActiveComponent} activeComponent={activeComponent} />
                     </div>
                 </div>
-                <div className='lg:flex-1 lg:ml-56 w-full'>
+                <div className='flex-1 lg:ml-44 xl:ml-52 2xl:ml-40 w-full'>
                     <div className='left-80'>
                         {renderComponent()}
                     </div>
