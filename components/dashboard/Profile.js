@@ -25,7 +25,7 @@ const Profile = () =>
     };
     return (
         <div className='mb-32'>
-            <div className='grid grid-cols-2 gap-x-14'>
+            <div className='grid md:grid-cols-2  md:gap-x-3 lg:gap-x-14'>
                 <div className='mt-6'>
                     <label htmlFor="firstname" className="block font-medium leading-6 text-primaryText">
                         First name
@@ -37,7 +37,7 @@ const Profile = () =>
                             type="text"
                             value={profileData.firstname}
                             disabled
-                            className="cursor-not-allowed select-none block w-[40rem] rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="cursor-not-allowed select-none block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
                 </div>
@@ -69,7 +69,7 @@ const Profile = () =>
                             disabled
                             value={profileData.email}
                             required
-                            className="cursor-not-allowed select-none block w-[40rem] rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="cursor-not-allowed select-none block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
                 </div>
@@ -148,7 +148,7 @@ const Profile = () =>
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-2 gap-x-14'>
+            <div className='grid md:grid-cols-2 md:gap-x-3 lg:gap-x-14'>
                 <div className='mt-6'>
                     <label htmlFor="region" className="block font-medium leading-6 text-primaryText">
                         Region
