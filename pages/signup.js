@@ -13,7 +13,7 @@ import Button from '@/components/Button';
 const Signup = () =>
 {
     const [isSubmitting, setIsSubmitting] = useState(false)
-    const { replace } = useRouter()
+    const { replace, push } = useRouter()
     const { user } = useUser()
     const [formData, setFormData] = useState({
         firstname: '',
@@ -34,7 +34,10 @@ const Signup = () =>
 
     if (user)
     {
-        replace("/dashboard")
+        if (user.identities[0].identity_data.email_verified === "true")
+        {
+            replace("/dashboard")
+        }
     }
 
     const handleSubmit = async (e) =>
@@ -64,6 +67,10 @@ const Signup = () =>
             } else
             {
                 notifications.show({ title: "Success", message: "You have signed up successfully!", color: "#3BB77E" });
+                push({
+                    pathname: "/verifyemail",
+                    query: { email: email }
+                })
             }
         } catch (err)
         {
