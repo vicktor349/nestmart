@@ -53,7 +53,7 @@ const Profile = () =>
                             value={profileData.lastname}
                             required
                             disabled
-                            className="cursor-not-allowed select-none block w-[40rem] rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="cursor w-full -not-allowed select-none block rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
                 </div>
@@ -84,7 +84,7 @@ const Profile = () =>
                             id="phone"
                             value={phoneNumber}
                             onChange={handleInputChange}
-                            className="block w-[40rem] rounded-md border-0 bg-gray-100 px-16 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="block w-full rounded-md border-0 bg-gray-100 px-16 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                             placeholder="Enter phone number"
                         />
                     </div>
@@ -94,7 +94,7 @@ const Profile = () =>
                         Gender
                     </label>
                     <div className="mt-2">
-                        <select id="gender" className="block w-[40rem] rounded-md border-0 bg-gray-100 px-3 hover:cursor-pointer h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none" >
+                        <select id="gender" className="block w-full rounded-md border-0 bg-gray-100 px-3 hover:cursor-pointer h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none" >
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
@@ -109,7 +109,7 @@ const Profile = () =>
                         <input
                             type="date"
                             id="birthdate"
-                            className="block w-[40rem] rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                             placeholder="Enter Birth"
                         />
                     </div>
@@ -159,7 +159,7 @@ const Profile = () =>
                             name=""
                             type=""
                             required
-                            className="block w-[40rem] rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
                 </div>
@@ -173,7 +173,7 @@ const Profile = () =>
                             name="lastname"
                             type="lastname"
                             required
-                            className="block w-[40rem] rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
+                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
                 </div>
