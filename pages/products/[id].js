@@ -7,7 +7,7 @@ import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
 import { useState, useEffect } from "react";
-import supabase from "@/config/supabase";
+import supabase from "@/helpers/supabase";
 
 const ProductDetailPage = () =>
 {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import supabase from '@/config/supabase';
+import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { Loader } from '@mantine/core';
 

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Rating } from '@mantine/core';
-import supabase from '@/config/supabase';
+import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useCart } from './CartContext';
 import { BsCart2 } from 'react-icons/bs';

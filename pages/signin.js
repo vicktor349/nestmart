@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { FcGoogle } from "react-icons/fc";
 import { MdFacebook } from "react-icons/md";
-import supabase from '@/config/supabase';
+import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useRouter } from 'next/router';
 import { useUser } from '@/components/userContext';

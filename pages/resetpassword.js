@@ -1,4 +1,4 @@
-import supabase from '@/config/supabase'
+import supabase from '@/helpers/supabase'
 import Head from 'next/head'
 import React, { useState } from 'react'
 import { showNotification } from '@mantine/notifications'

@@ -5,7 +5,7 @@ import { BiCategory } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { GrSort } from "react-icons/gr";
 import BottomHeroBanner from '@/components/BottomHeroBanner';
-import supabase from '@/config/supabase';
+import supabase from '@/helpers/supabase';
 
 
 

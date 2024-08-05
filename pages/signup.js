@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { MdFacebook } from "react-icons/md";
 import Link from 'next/link';
-import supabase from '@/config/supabase';
+import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useUser } from '@/components/userContext';
 import { useRouter } from 'next/router';

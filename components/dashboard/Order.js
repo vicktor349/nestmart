@@ -1,4 +1,4 @@
-import supabase from '@/config/supabase'
+import supabase from '@/helpers/supabase'
 import { Divider } from '@mantine/core'
 import React, { useEffect, useState } from 'react'
 

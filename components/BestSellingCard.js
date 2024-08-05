@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Rating } from '@mantine/core'
 import { useRouter } from 'next/router'
-import supabase from '@/config/supabase'
+import supabase from '@/helpers/supabase'
 
 const BestSellingCard = () =>
 {

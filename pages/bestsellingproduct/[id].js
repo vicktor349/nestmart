@@ -8,7 +8,7 @@ import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
 import BottomHeroBanner from "@/components/BottomHeroBanner";
-import supabase from "@/config/supabase";
+import supabase from "@/helpers/supabase";
 
 const BestSellingProductPage = () =>
 {

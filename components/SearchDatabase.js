@@ -1,5 +1,5 @@
 import React from 'react'
-import supabase from '@/config/supabase'
+import supabase from '@/helpers/supabase'
 
 
 
