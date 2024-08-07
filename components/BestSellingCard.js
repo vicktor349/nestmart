@@ -1,15 +1,17 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Rating } from '@mantine/core'
 import { useRouter } from 'next/router'
 import supabase from '@/helpers/supabase'
+import { useCart } from './CartContext'
+import { notifications } from '@mantine/notifications'
 
 const BestSellingCard = () =>
 {
     const [sellingData, setSellingData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const router = useRouter()
+    const { addToCart } = useCart()
 
     const route = (id) =>
     {
@@ -50,6 +52,16 @@ const BestSellingCard = () =>
         )
     }
 
+    const handleAddToCart = (data) =>
+    {
+        addToCart(data)
+        notifications.show({
+            title: 'Success',
+            message: `${data.text} has been added to the cart.`,
+            color: 'green',
+        });
+    }
+
     return (
         <div>
             <div className='grid sssms:grid-cols-2 sm:grid-cols-100 ssm:gap-2 sm:gap-5 select-none'>
@@ -74,9 +86,9 @@ const BestSellingCard = () =>
                                             <div className="bg-primary h-2 rounded-full w-20"></div>
                                         </div>
                                         <p className='text-[#ADADAD] text-sm mt-2'>Sold: 90/120</p>
-                                        <Link href="/" className='text-white text-sm bg-primary flex justify-center mt-2 py-2 px-5 ml-auto rounded-[0.2rem] ssm:mb-3 sm:mb-8 font-bold'>
+                                        <button onClick={(e) => { e.stopPropagation(); handleAddToCart(data); }} className='text-white text-sm bg-primary flex justify-center mt-2 py-2 px-5 ml-auto rounded-[0.2rem] ssm:mb-3 sm:mb-8 font-bold w-full'>
                                             Add To Cart
-                                        </Link>
+                                        </button>
                                     </section>
                                 </div>
                             </div>
