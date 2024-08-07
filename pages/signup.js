@@ -57,8 +57,21 @@ const Signup = () =>
                         firstname: firstname,
                         lastname: lastname,
                     }
-                }
+                },
+
             });
+            // const { error } = await supabase.auth.admin.createUser({
+            //     email: email,
+            //     password: password,
+            //     options: {
+            //         data: {
+            //             firstname: firstname,
+            //             lastname: lastname,
+            //         }
+            //     },
+            //     user_metadata: { role: 'admin' }
+
+            // });
 
             if (error)
             {
