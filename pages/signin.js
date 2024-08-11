@@ -23,6 +23,7 @@ const SignIn = () =>
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const { replace } = useRouter()
     const handleSignIn = async (e) =>
     {
@@ -35,9 +36,11 @@ const SignIn = () =>
         });
 
         setLoading(false);
+        setIsLoading(true)
 
         if (error)
         {
+            setIsLoading(false)
             console.error('Error signing in:', error.message);
             notifications.show({ title: "Error", message: error.message, color: "red" });
         } else
@@ -61,6 +64,14 @@ const SignIn = () =>
             }
         }
     };
+    if (isLoading)
+    {
+        return (
+            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
+                <div className="loader"></div>
+            </div>
+        );
+    }
 
 
 
