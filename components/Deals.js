@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link';
 import dealsData from '@/data/dealsData';
 import { Rating } from "@mantine/core"
+import { BsCart2 } from 'react-icons/bs';
 
 const Deals = () =>
 {
@@ -15,7 +16,7 @@ const Deals = () =>
           {
             return (
               <div key={data.id}>
-                <Image src={data.imageUrl} className="h-fit w-full mx-auto mt-5 object-contain bg-cover bg-center" alt='Product Image' width={500} height={500} priority />
+                <Image src={data.imageUrl} className="mx-auto mt-5 object-contain bg-cover bg-center" alt='Product Image' width={500} height={500} priority />
                 <div className='mx-auto w-64 bg-white shadow-md relative -mt-24 rounded-2xl'>
                   <div className='px-2 py-1'>
                     <p className='text-sm text-[#ADADAD] w-full bg-white'>{data.category}</p>
@@ -27,7 +28,7 @@ const Deals = () =>
                         <p className='text-[#3BB77E] font-semibold'>{data.price}</p>
                         <p className='text-[#ADADAD] ml-2 font-semibold'><s>{data.changedPrice}</s></p>
                         <Link href="/" className='text-primary text-sm bg-[#DEF9EC] flex items-center py-2 px-5 ml-auto rounded-[0.2rem]'>
-                          <Image src={"/images/popular/cart.svg"} width={500} height={500} className='w-5 h-5' alt='Cart Logo' />
+                          <BsCart2 className='w-5 h-5' />
                           Add
                         </Link>
                       </section>
