@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Checkbox, Divider, Loader } from '@mantine/core';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -24,31 +24,46 @@ const SignIn = () =>
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const { replace } = useRouter()
-    const { user } = useUser()
     const handleSignIn = async (e) =>
     {
         e.preventDefault();
         setLoading(true);
+
         const { error } = await supabase.auth.signInWithPassword({
             email,
             password,
         });
+
         setLoading(false);
+
         if (error)
         {
             console.error('Error signing in:', error.message);
-            notifications.show({ title: "Error", message: error.message, color: "red" })
+            notifications.show({ title: "Error", message: error.message, color: "red" });
         } else
         {
-            setTimeout(() => { }, 4000)
-            notifications.show({ title: "Success", message: "Login Successful", color: "#3BB77E" })
+            const { data: { user } } = await supabase.auth.getUser();
+
+            if (user)
+            {
+                if (user.user_metadata.role === "user")
+                {
+                    notifications.show({ title: "Success", message: "Login Successful", color: "#3BB77E" });
+                    replace("/dashboard");
+                } else if (user.user_metadata.role === "admin")
+                {
+                    notifications.show({ title: "Success", message: "Login Successful", color: "#3BB77E" });
+                    replace("/admin/dashboard");
+                } else
+                {
+                    console.log("Login Error");
+                }
+            }
         }
     };
-    if (user)
-    {
-        replace('/dashboard');
-        return null;
-    }
+
+
+
 
     return (
         <>
