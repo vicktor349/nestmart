@@ -49,28 +49,28 @@ const Signup = () =>
         try
         {
 
-            // const { error } = await supabase.auth.signUp({
-            //     email: email,
-            //     password: password,
-            //     options: {
-            //         data: {
-            //             firstname: firstname,
-            //             lastname: lastname,
-            //             role: "user"
-            //         }
-            //     },
-
-            // });
-            const { error } = await supabase.auth.admin.createUser({
+            const { error } = await supabase.auth.signUp({
                 email: email,
                 password: password,
-                user_metadata: {
-                    firstname: firstname,
-                    lastname: lastname,
-                    role: "admin"
+                options: {
+                    data: {
+                        firstname: firstname,
+                        lastname: lastname,
+                        role: "user"
+                    }
                 },
-                email_confirm: true
+
             });
+            // const { error } = await supabase.auth.admin.createUser({
+            //     email: email,
+            //     password: password,
+            //     user_metadata: {
+            //         firstname: firstname,
+            //         lastname: lastname,
+            //         role: "admin"
+            //     },
+            //     email_confirm: true
+            // });
 
             if (error)
             {
