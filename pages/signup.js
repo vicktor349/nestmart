@@ -49,29 +49,28 @@ const Signup = () =>
         try
         {
 
-            const { error } = await supabase.auth.signUp({
-                email: email,
-                password: password,
-                options: {
-                    data: {
-                        firstname: firstname,
-                        lastname: lastname,
-                    }
-                },
-
-            });
-            // const { error } = await supabase.auth.admin.createUser({
+            // const { error } = await supabase.auth.signUp({
             //     email: email,
             //     password: password,
             //     options: {
             //         data: {
             //             firstname: firstname,
             //             lastname: lastname,
+            //             role: "user"
             //         }
             //     },
-            //     user_metadata: { role: 'admin' }
 
             // });
+            const { error } = await supabase.auth.admin.createUser({
+                email: email,
+                password: password,
+                user_metadata: {
+                    firstname: firstname,
+                    lastname: lastname,
+                    role: "admin"
+                },
+                email_confirm: true
+            });
 
             if (error)
             {
@@ -88,8 +87,9 @@ const Signup = () =>
         } catch (err)
         {
             notifications.show({ title: "Error", message: err, color: "red" })
+            setIsSubmitting(false)
         }
-        setIsSubmitting(true)
+        setIsSubmitting(false)
     };
 
 
