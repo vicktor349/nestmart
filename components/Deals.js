@@ -13,14 +13,15 @@ const Deals = () =>
       <div className='grid grid-cols-100 gap-5 select-none mt-3'>
         {dealsData.map((data) => (
           <div key={data.id} className='relative'>
-            <Image
-              src={data.imageUrl}
-              className="mx-auto mt-5 object-contain bg-cover bg-center"
-              alt='Product Image'
-              width={500}
-              height={500}
-              layout='responsive'
-            />
+            <div className="relative w-full h-80">
+              <Image
+                src={data.imageUrl}
+                className="object-contain bg-cover bg-center w-full h-full"
+                alt='Product Image'
+                fill
+                sizes="(max-width: 768px) 150vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
             <div className='mx-auto w-64 bg-white shadow-md relative -mt-24 rounded-2xl'>
               <div className='px-2 py-1'>
                 <p className='text-sm text-[#ADADAD] w-full bg-white'>{data.category}</p>
