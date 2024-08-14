@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Checkbox, Divider, Loader } from '@mantine/core';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -7,17 +7,9 @@ import { MdFacebook } from "react-icons/md";
 import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useRouter } from 'next/router';
-import { useUser } from '@/components/userContext';
 import Loaderr from '@/components/Loader';
+import SocialButton from '@/components/SocialButton';
 
-const Button = ({ text, icon, onClick }) =>
-{
-    return (
-        <div onClick={onClick} className='text-primaryText bg-white border-borderColor border rounded-md w-44 h-12 flex items-center justify-center text-center hover:cursor-pointer select-none space-x-3'>
-            {icon} <p className='font-semibold text-primaryText'>{text}</p>
-        </div>
-    );
-};
 
 const SignIn = () =>
 {
@@ -143,8 +135,8 @@ const SignIn = () =>
                     </div>
                     <Divider label="Or continue with" labelPosition='center' className='font-semibold my-5' />
                     <div className="flex items-center justify-between space-x-6">
-                        <Button text="Google" icon={<FcGoogle className='text-xl' />} onClick={() => supabase.auth.signInWithOAuth({ provider: 'google' })} />
-                        <Button text="Facebook" icon={<MdFacebook className='text-2xl' color='#0080ff' />} onClick={() => supabase.auth.signInWithOAuth({ provider: 'facebook' })} />
+                        <SocialButton text="Google" icon={<FcGoogle className='text-xl' />} onClick={() => supabase.auth.signInWithOAuth({ provider: 'google' })} />
+                        <SocialButton text="Facebook" icon={<MdFacebook className='text-2xl' color='#0080ff' />} onClick={() => supabase.auth.signInWithOAuth({ provider: 'facebook' })} />
                     </div>
                 </div>
             </div>

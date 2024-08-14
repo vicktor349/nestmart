@@ -1,4 +1,4 @@
-import { Checkbox, Divider, Loader } from '@mantine/core';
+import { Checkbox, Divider, Loader, Stepper, Button, Group } from '@mantine/core';
 import Head from 'next/head';
 import React, { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
@@ -8,7 +8,7 @@ import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useUser } from '@/components/userContext';
 import { useRouter } from 'next/router';
-import Button from '@/components/Button';
+import SocialButton from '@/components/SocialButton';
 
 const Signup = () =>
 {
@@ -196,8 +196,8 @@ const Signup = () =>
                     </div>
                     <Divider label="Or continue with" labelPosition='center' className='font-semibold my-5' />
                     <div className="flex items-center justify-between space-x-6">
-                        <Button text="Google" icon={<FcGoogle className='text-xl' />} />
-                        <Button text="Facebook" icon={<MdFacebook className='text-2xl' color='#0080ff' />} />
+                        <SocialButton text="Google" icon={<FcGoogle className='text-xl' />} />
+                        <SocialButton text="Facebook" icon={<MdFacebook className='text-2xl' color='#0080ff' />} />
                     </div>
                 </div>
             </div>
