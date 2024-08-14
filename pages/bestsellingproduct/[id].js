@@ -9,6 +9,7 @@ import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
 import BottomHeroBanner from "@/components/BottomHeroBanner";
 import supabase from "@/helpers/supabase";
+import Loader from "@/components/Loader";
 
 const BestSellingProductPage = () =>
 {
@@ -52,10 +53,7 @@ const BestSellingProductPage = () =>
     if (isLoading || !bestSellingProduct)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader">
-                </div>
-            </div>
+            <Loader />
         )
     }
 

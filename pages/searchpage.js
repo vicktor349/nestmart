@@ -5,6 +5,7 @@ import { Rating } from '@mantine/core';
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
+import Loader from '@/components/Loader';
 
 const SearchPage = () =>
 {
@@ -36,9 +37,7 @@ const SearchPage = () =>
     if (isLoading)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader"></div>
-            </div>
+            <Loader />
         );
     }
 

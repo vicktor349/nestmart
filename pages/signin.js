@@ -8,6 +8,7 @@ import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useRouter } from 'next/router';
 import { useUser } from '@/components/userContext';
+import Loaderr from '@/components/Loader';
 
 const Button = ({ text, icon, onClick }) =>
 {
@@ -67,9 +68,7 @@ const SignIn = () =>
     if (isLoading)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader"></div>
-            </div>
+            <Loaderr />
         );
     }
 

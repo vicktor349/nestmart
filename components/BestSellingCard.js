@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import supabase from '@/helpers/supabase'
 import { useCart } from './CartContext'
 import { notifications } from '@mantine/notifications'
+import Loader from './Loader'
 
 const BestSellingCard = () =>
 {
@@ -45,10 +46,7 @@ const BestSellingCard = () =>
     if (isLoading || !sellingData)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader">
-                </div>
-            </div>
+            <Loader />
         )
     }
 

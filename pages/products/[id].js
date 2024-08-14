@@ -8,6 +8,7 @@ import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
 import { useState, useEffect } from "react";
 import supabase from "@/helpers/supabase";
+import Loader from "@/components/Loader";
 
 const ProductDetailPage = () =>
 {
@@ -50,10 +51,7 @@ const ProductDetailPage = () =>
     if (isLoading || !productDetail)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader">
-                </div>
-            </div>
+            <Loader />
         )
     }
 

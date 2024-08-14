@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { GrSort } from "react-icons/gr";
 import BottomHeroBanner from '@/components/BottomHeroBanner';
 import supabase from '@/helpers/supabase';
+import Loader from '@/components/Loader';
 
 
 
@@ -42,10 +43,7 @@ const shop = () =>
     if (isLoading || !shopData)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader">
-                </div>
-            </div>
+            <Loader />
         )
     }
 

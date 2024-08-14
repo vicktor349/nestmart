@@ -6,6 +6,7 @@ import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useCart } from './CartContext';
 import { BsCart2 } from 'react-icons/bs';
+import Loader from './Loader';
 
 const PopularProducts = () =>
 {
@@ -46,9 +47,7 @@ const PopularProducts = () =>
     if (isLoading || !products)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader"></div>
-            </div>
+            <Loader />
         );
     }
 
