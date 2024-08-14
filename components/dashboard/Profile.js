@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useUser } from '../userContext';
+import supabase from '@/helpers/supabase';
 
 const Profile = () =>
 {
@@ -8,7 +9,14 @@ const Profile = () =>
     const [profileData, setProfileData] = useState({
         firstname: user.user_metadata.firstname,
         lastname: user.user_metadata.lastname,
-        email: user.user_metadata.email
+        email: user.user_metadata.email,
+        // phonenumber: "",
+        gender: "",
+        birthdate: "",
+        address: "",
+        region: "",
+        city: ""
+
     })
 
     const handleInputChange = (event) =>
@@ -23,8 +31,47 @@ const Profile = () =>
         setPhoneNumber(input)
         setProfileData({ ...profileData })
     };
+
+    const handleChange = (e) =>
+    {
+        const { name, value } = e.target;
+        setProfileData({ ...profileData, [name]: value });
+        // handleInputChange
+    }
+
+    const handleSubmit = async (e) =>
+    {
+        e.preventDefault();
+        const updatedInfo = {};
+        for (const key in profileData)
+        {
+            if (profileData[key] !== '')
+            {
+                updatedInfo[key] = profileData[key];
+            }
+        }
+
+
+        const userId = user.id;
+
+        const { data, error } = await supabase
+            .from('profiles')
+            .update(updatedInfo)
+            .eq('id', userId);
+
+        if (error)
+        {
+            console.error('Error updating user info:', error);
+        } else
+        {
+            console.log('User info updated');
+        }
+    };
+
+
+
     return (
-        <div className='mb-32'>
+        <form onSubmit={handleSubmit} className='mb-32'>
             <div className='grid md:grid-cols-2  md:gap-x-3 lg:gap-x-14'>
                 <div className='mt-6'>
                     <label htmlFor="firstname" className="block font-medium leading-6 text-primaryText">
@@ -74,16 +121,17 @@ const Profile = () =>
                     </div>
                 </div>
                 <div className='relative mt-6'>
-                    <label htmlFor="phone" className="block font-medium leading-6 text-primaryText">
+                    <label htmlFor="phonenumber" className="block font-medium leading-6 text-primaryText">
                         Phone Number
                     </label>
                     <div className="mt-2 flex items-center">
                         <span className="absolute left-0 pl-3 text-gray-500">+(234)</span>
                         <input
                             type="text"
-                            id="phone"
-                            value={phoneNumber}
-                            onChange={handleInputChange}
+                            id="phonenumber"
+                            name='phonenumber'
+                            // value={profileData.phonenumber}
+                            // onChange={handleChange}
                             className="block w-full rounded-md border-0 bg-gray-100 px-16 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                             placeholder="Enter phone number"
                         />
@@ -94,7 +142,8 @@ const Profile = () =>
                         Gender
                     </label>
                     <div className="mt-2">
-                        <select id="gender" className="block w-full rounded-md border-0 bg-gray-100 px-3 hover:cursor-pointer h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none" >
+                        <select id="gender" onChange={handleChange} value={profileData.gender} name='gender' className="block w-full rounded-md border-0 bg-gray-100 px-3 hover:cursor-pointer h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none" >
+                            <option value="" disabled>Select Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
@@ -108,7 +157,10 @@ const Profile = () =>
                     <div className="mt-2">
                         <input
                             type="date"
+                            name='birthdate'
                             id="birthdate"
+                            value={profileData.birthdate}
+                            onChange={handleChange}
                             className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                             placeholder="Enter Birth"
                         />
@@ -124,29 +176,17 @@ const Profile = () =>
                     <div className="mt-2">
                         <input
                             id="address"
-                            name=""
-                            type=""
+                            name="address"
+                            type="text"
                             required
+                            value={profileData.address}
+                            onChange={handleChange}
                             className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
                 </div>
             </div>
             <div>
-                <div className='mt-6'>
-                    <label htmlFor="additionalinformation" className="block font-medium leading-6 text-primaryText">
-                        Additional Information
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id=""
-                            name=""
-                            type=""
-                            required
-                            className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
-                        />
-                    </div>
-                </div>
             </div>
             <div className='grid md:grid-cols-2 md:gap-x-3 lg:gap-x-14'>
                 <div className='mt-6'>
@@ -155,10 +195,12 @@ const Profile = () =>
                     </label>
                     <div className="mt-2">
                         <input
-                            id=""
-                            name=""
-                            type=""
+                            id="region"
+                            name="region"
+                            type="text"
                             required
+                            value={profileData.region}
+                            onChange={handleChange}
                             className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
@@ -169,10 +211,12 @@ const Profile = () =>
                     </label>
                     <div className="mt-2">
                         <input
-                            id="lastname"
-                            name="lastname"
-                            type="lastname"
+                            id="city"
+                            name="city"
+                            type="text"
                             required
+                            value={profileData.city}
+                            onChange={handleChange}
                             className="block w-full rounded-md border-0 bg-gray-100 px-3 h-12 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 outline-none"
                         />
                     </div>
@@ -187,7 +231,7 @@ const Profile = () =>
                     Save
                 </button>
             </div>
-        </div>
+        </form>
     )
 }
 
