@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useUser } from '@/components/userContext';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
-import { Loader } from '@mantine/core';
 import Head from 'next/head';
 import SideNavbar from '@/components/dashboard/SideNavbar';
 import Profile from '@/components/dashboard/Profile';
 import Order from '@/components/dashboard/Order';
 import Inbox from '@/components/dashboard/Inbox';
+import NotAuthorized from '@/components/NotAuthorized';
+import Loader from '@/components/Loader';
 
 const Dashboard = () =>
 {
@@ -53,38 +53,23 @@ const Dashboard = () =>
     {
         if (!loading && !user)
         {
-            const timer = setTimeout(() =>
-            {
-                router.replace('/signin');
-            }, 3000);
-
-            return () => clearTimeout(timer);
+            router.replace('/signin');
         }
     }, [user, loading, router]);
 
     if (loading)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className="loader"></div>
-            </div>
+            <Loader />
         );
     }
 
     if (!user)
     {
         return (
-            <div className='fixed inset-0 flex items-center justify-center bg-white z-[999999]'>
-                <div className='grid place-items-center space-y-6'>
-                    <Image width={500} height={500} className='w-48 h-48' src={"/images/forbidden.png"} alt="Image displaying not allowed" priority />
-                    <p className='text-primary text-3xl'>Oops! You're not authorized to view this page</p>
-                    <p className='text-primaryText'>Redirecting you to login page</p>
-                    <Loader size={72} color='#3BB77E' />
-                </div>
-            </div>
+            <NotAuthorized />
         );
     }
-
     return (
         <>
             <Head>
