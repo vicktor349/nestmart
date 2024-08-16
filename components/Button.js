@@ -1,9 +1,12 @@
-const Button = ({ text, icon }) =>
+import React from 'react'
+
+const Button = ({ onClick, text, type, disabled }) =>
 {
     return (
-        <div className='text-primaryText bg-white border-borderColor border rounded-md w-44 h-12 flex items-center justify-center text-center hover:cursor-pointer select-none space-x-3'>
-            {icon} <p className='font-semibold text-primaryText'>{text}</p>
-        </div>
+        <button onClick={onClick} type={type} className='w-full bg-primary rounded-md text-white shadow-md py-2' disabled={disabled}>
+            {text}
+        </button>
     )
 }
+
 export default Button
