@@ -79,10 +79,10 @@ const BestSellingProductPage = () =>
                                     <p className="text-secondaryText ml-24">({`$ ${bestSellingProduct.review}`} reviews)</p>
                                 </div>
                                 <div className="flex items-center">
-                                    <p className="text-primary font-semibold text-4xl">{`$ ${bestSellingProduct.price}`}</p>
+                                    <p className="text-primary font-semibold text-4xl">{`₦${bestSellingProduct.price}`}</p>
                                     <div className="ml-2">
                                         <p className="text-[#FDC040] text-sm">26% Off</p>
-                                        <p className="text-secondaryText text-md"><s>{`$ ${bestSellingProduct.changedprice}`}</s></p>
+                                        <p className="text-secondaryText text-md"><s>{`₦${bestSellingProduct.changedprice}`}</s></p>
                                     </div>
                                 </div>
                                 <p className="text-secondaryText">

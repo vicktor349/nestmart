@@ -2,17 +2,59 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { RiDeleteBin6Line } from 'react-icons/ri';
+import { Loader } from '@mantine/core';
+import { notifications } from '@mantine/notifications';
 import { useCart } from '@/components/CartContext';
+import { useUser } from '@/components/userContext';
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import ConfirmationModal from '@/components/ConfirmationModal';
 
 const Cart = () =>
 {
     const { cartItems, updateQuantity, removeItem, clearCart } = useCart();
+    const { user } = useUser();
+    const router = useRouter();
     const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [itemToRemove, setItemToRemove] = useState(null);
+    const [isCheckingOut, setIsCheckingOut] = useState(false);
+
+    const handleCheckout = async () =>
+    {
+        if (!user)
+        {
+            notifications.show({ title: 'Sign in required', message: 'Please sign in to checkout.', color: 'yellow' });
+            router.push('/signin');
+            return;
+        }
+
+        setIsCheckingOut(true);
+        try
+        {
+            const res = await fetch('/api/paystack/initialize', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: user.email, items: cartItems }),
+            });
+            const data = await res.json();
+
+            if (!res.ok)
+            {
+                notifications.show({ title: 'Error', message: data.error || 'Could not start checkout.', color: 'red' });
+                setIsCheckingOut(false);
+                return;
+            }
+
+            window.location.href = data.authorization_url;
+        } catch (err)
+        {
+            console.error('Checkout error:', err);
+            notifications.show({ title: 'Error', message: 'Could not start checkout.', color: 'red' });
+            setIsCheckingOut(false);
+        }
+    };
 
     const handleQuantityChange = (id, quantity) =>
     {
@@ -126,10 +168,16 @@ const Cart = () =>
                         <div className="col-span-1 ssm:mt-12 xl:mt-28">
                             <div className="rounded-lg shadow-lg py-12 space-y-7 px-4">
                                 <h2 className="text-xl font-bold mb-4">Order Summary</h2>
-                                <p className='flex items-center justify-between text-primaryText'>Subtotal: <span className='font-semibold text-primary'>${subtotal.toFixed(2)}</span></p>
+                                <p className='flex items-center justify-between text-primaryText'>Subtotal: <span className='font-semibold text-primary'>₦{subtotal.toFixed(2)}</span></p>
                                 <p className='flex items-center justify-between text-primaryText'>Shipping: <span className='font-semibold text-primary'>Free</span></p>
-                                <p className='flex items-center justify-between text-primaryText'>Total: <span className='font-semibold text-primary'>${subtotal.toFixed(2)}</span></p>
-                                <button className="bg-primary text-white py-3 px-4 rounded mt-4 w-full hover:shadow-lg">Proceed To Checkout</button>
+                                <p className='flex items-center justify-between text-primaryText'>Total: <span className='font-semibold text-primary'>₦{subtotal.toFixed(2)}</span></p>
+                                <button
+                                    onClick={handleCheckout}
+                                    disabled={isCheckingOut}
+                                    className="bg-primary text-white py-3 px-4 rounded mt-4 w-full hover:shadow-lg flex justify-center items-center"
+                                >
+                                    {isCheckingOut ? <Loader size={20} color="white" /> : 'Proceed To Checkout'}
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -7,8 +7,8 @@ const relatedproduct = [
         text: "Seeds of Change Organic",
         rating: "2",
         vendor: "NestFood",
-        price: "$28.85",
-        changedPrice: "$32.8",
+        price: "₦28.85",
+        changedPrice: "₦32.8",
         review: 20
     },
     {
@@ -19,8 +19,8 @@ const relatedproduct = [
         text: "All Natural Italian-Style ",
         rating: "3.5",
         vendor: "Stouffer",
-        price: "$52.85",
-        changedPrice: "$55.8",
+        price: "₦52.85",
+        changedPrice: "₦55.8",
         review: 54
     },
     {
@@ -31,8 +31,8 @@ const relatedproduct = [
         text: "Angie's Boomchickapop",
         rating: "5",
         vendor: "StarKist",
-        price: "$48.85",
-        changedPrice: "$52.8",
+        price: "₦48.85",
+        changedPrice: "₦52.8",
         review: 24
     },
     {
@@ -43,8 +43,8 @@ const relatedproduct = [
         text: "Foster Farms Takeout",
         rating: "1",
         vendor: "NestFood",
-        price: "$17.85",
-        changedPrice: "$19.8",
+        price: "₦17.85",
+        changedPrice: "₦19.8",
         review: 63
     },
 ]

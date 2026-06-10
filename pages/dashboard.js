@@ -6,6 +6,8 @@ import SideNavbar from '@/components/dashboard/SideNavbar';
 import Profile from '@/components/dashboard/Profile';
 import Order from '@/components/dashboard/Order';
 import Inbox from '@/components/dashboard/Inbox';
+import SavedItems from '@/components/dashboard/SavedItems';
+import Transactions from '@/components/dashboard/Transactions';
 import NotAuthorized from '@/components/NotAuthorized';
 import Loader from '@/components/Loader';
 
@@ -46,6 +48,10 @@ const Dashboard = () =>
                 return <Order setActiveComponent={handleSetActiveComponent} />
             case "Inbox":
                 return <Inbox setActiveComponent={handleSetActiveComponent} />
+            case "SavedItems":
+                return <SavedItems />
+            case "Transactions":
+                return <Transactions />
         }
     }
 

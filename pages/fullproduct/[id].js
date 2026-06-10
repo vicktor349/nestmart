@@ -2,20 +2,37 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { NumberInput, Rating } from '@mantine/core';
 import { BsCart2 } from "react-icons/bs";
 import Tab from "@/components/Tab";
 import RelatedProducts from "@/components/RelatedProducts";
 import supabase from "@/helpers/supabase";
 import Loader from "@/components/Loader";
+import { useCart } from "@/components/CartContext";
+import { useFavourites } from "@/components/FavouritesContext";
+import { notifications } from "@mantine/notifications";
 
 const fullProductDetailPage = () =>
 {
-    const [shopProduct, setShopProduct] = useState([])
+    const [shopProduct, setShopProduct] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
+    const [quantity, setQuantity] = useState(1)
+    const { addToCart } = useCart()
+    const { isFavourite, toggleFavourite } = useFavourites()
+
     const router = useRouter();
     const { id } = router.query;
+
+    const handleAddToCart = () =>
+    {
+        addToCart(shopProduct, quantity)
+        notifications.show({
+            title: 'Success',
+            message: `${shopProduct.text} has been added to the cart.`,
+            color: 'green',
+        })
+    }
 
     useEffect(() =>
     {
@@ -43,11 +60,6 @@ const fullProductDetailPage = () =>
         setIsLoading(false);
     }
 
-
-
-    useEffect(() =>
-    {
-    }, [shopProduct]);
 
     if (isLoading || !shopProduct)
     {
@@ -79,10 +91,10 @@ const fullProductDetailPage = () =>
                                     <p className="text-secondaryText ml-24">({`${shopProduct.review}`} reviews)</p>
                                 </div>
                                 <div className="flex items-center">
-                                    <p className="text-primary font-semibold text-4xl">{`$ ${shopProduct.price}`}</p>
+                                    <p className="text-primary font-semibold text-4xl">{`₦${shopProduct.price}`}</p>
                                     <div className="ml-2">
                                         <p className="text-[#FDC040] text-sm">26% Off</p>
-                                        <p className="text-secondaryText text-md"><s>{`$ ${shopProduct.changedprice}`}</s></p>
+                                        <p className="text-secondaryText text-md"><s>{`₦${shopProduct.changedprice}`}</s></p>
                                     </div>
                                 </div>
                                 <p className="text-secondaryText">
@@ -104,20 +116,22 @@ const fullProductDetailPage = () =>
                                     <NumberInput
                                         placeholder="1"
                                         allowNegative={false}
-                                        defaultValue={1}
+                                        min={1}
+                                        value={quantity}
+                                        onChange={(value) => setQuantity(Number(value) || 1)}
                                         className="w-16"
                                     />
-                                    <div className=" text-white bg-primary rounded-md hover:cursor-pointer ml-4">
+                                    <button onClick={handleAddToCart} className=" text-white bg-primary rounded-md hover:cursor-pointer ml-4">
                                         <div className="p-2 flex items-center">
                                             <BsCart2 />
                                             <p className="ml-2"> Add to cart</p>
                                         </div>
-                                    </div>
-                                    <div className="border-borderColor border rounded-md ml-4">
-                                        <div className="p-2 hover:cursor-pointer">
-                                            <AiOutlineHeart style={{ color: "#333333" }} className="text-xl" />
-                                        </div>
-                                    </div>
+                                    </button>
+                                    <button onClick={() => toggleFavourite(shopProduct)} className="border-borderColor border rounded-md ml-4 p-2 hover:cursor-pointer">
+                                        {isFavourite(shopProduct.id)
+                                            ? <AiFillHeart className='text-red-500 text-xl' />
+                                            : <AiOutlineHeart style={{ color: "#333333" }} className="text-xl" />}
+                                    </button>
                                 </div>
                             </div>
                         </div>

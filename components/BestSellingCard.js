@@ -77,8 +77,8 @@ const BestSellingCard = () =>
                                         <Rating value={data.rating} readOnly fractions={2} />
                                         <p>By <span className='text-[#3BB77E] hover:cursor-pointer hover:underline'>{data.vendor}</span></p>
                                         <section className='flex items-center sm:mt-2  text-md justify-between'>
-                                            <p className='text-[#3BB77E] font-semibold'>{`$ ${data.price}`}</p>
-                                            <p className='text-[#ADADAD] ml-2 font-semibold'><s>{`$${data.changedprice}`}</s></p>
+                                            <p className='text-[#3BB77E] font-semibold'>{`₦${data.price}`}</p>
+                                            <p className='text-[#ADADAD] ml-2 font-semibold'><s>{`₦${data.changedprice}`}</s></p>
                                         </section>
                                         <div className="w-full bg-[#E9ECEF] rounded-full h-2 dark:bg-[#E9ECEF] my-1">
                                             <div className="bg-primary h-2 rounded-full w-20"></div>

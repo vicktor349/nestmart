@@ -5,7 +5,9 @@ import { Rating } from '@mantine/core';
 import supabase from '@/helpers/supabase';
 import { notifications } from '@mantine/notifications';
 import { useCart } from './CartContext';
+import { useFavourites } from './FavouritesContext';
 import { BsCart2 } from 'react-icons/bs';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import Loader from './Loader';
 
 const PopularProducts = () =>
@@ -14,6 +16,8 @@ const PopularProducts = () =>
     const [products, setProducts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const { addToCart } = useCart();
+    const { isFavourite, toggleFavourite } = useFavourites();
+
 
     const route = (id) =>
     {
@@ -82,7 +86,14 @@ const PopularProducts = () =>
                             height={500}
                         />
                         <div className='ssm:mx-2 sm:mx-3'>
+                            <div className='flex items-center justify-between'>
                             <p className='text-sm text-[#ADADAD]'>{product.category}</p>
+                            <button onClick={(e) => { e.stopPropagation(); toggleFavourite(product); }} className='p-1 mr-2'>
+                                {isFavourite(product.id)
+                                    ? <AiFillHeart className='text-red-500 text-xl' />
+                                    : <AiOutlineHeart className='text-gray-400 text-xl' />}
+                            </button>
+                        </div>
                             <h3 className='text-primaryText sm:font-semibold hover:cursor-pointer sm:h-12 ssm:text-sm sm:text-base sssms:h-10 ssm:h-10 ssms:h-10 line-clamp-2'>
                                 {product.text}
                             </h3>
@@ -93,9 +104,9 @@ const PopularProducts = () =>
                                 </p>
                                 <section className='sm:flex items-center ssm:mb-4 ssm:mt-1 sm:mb-5 text-md'>
                                     <section className='flex items-center ssm:space-x-5 xl:space-x-2'>
-                                        <p className='text-[#3BB77E] font-semibold'>{`$  ${product.price}`}</p>
+                                        <p className='text-[#3BB77E] font-semibold'>{`₦${product.price}`}</p>
                                         <p className='text-[#ADADAD] sm:ml-2 font-semibold'>
-                                            <s>{`$ ${product.changedprice}`}</s>
+                                            <s>{`₦${product.changedprice}`}</s>
                                         </p>
                                     </section>
                                     <button

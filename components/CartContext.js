@@ -4,23 +4,25 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) =>
 {
-    const [cartItems, setCartItems] = useState([]);
-
-    useEffect(() =>
+    const [cartItems, setCartItems] = useState(() =>
     {
-        const storedCartItems = localStorage.getItem('cartItems');
-        if (storedCartItems)
+        if (typeof window === 'undefined') return [];
+        try
         {
-            setCartItems(JSON.parse(storedCartItems));
+            const stored = localStorage.getItem('cartItems');
+            return stored ? JSON.parse(stored) : [];
+        } catch
+        {
+            return [];
         }
-    }, []);
+    });
 
     useEffect(() =>
     {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
 
-    const addToCart = (product) =>
+    const addToCart = (product, quantity = 1) =>
     {
         setCartItems(prevItems =>
         {
@@ -28,10 +30,10 @@ export const CartProvider = ({ children }) =>
             if (existingItem)
             {
                 return prevItems.map(item =>
-                    item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+                    item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
                 );
             }
-            return [...prevItems, { ...product, quantity: 1 }];
+            return [...prevItems, { ...product, quantity }];
         });
     };
 

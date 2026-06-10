@@ -5,8 +5,8 @@ const dealsData = [
         text: "Seeds of Change Organic Quinoa, Brown, & Red Rice",
         rating: "2.5",
         vendor: "NestFood",
-        price: "$32.85",
-        changedPrice: "$33.8"
+        price: "₦32.85",
+        changedPrice: "₦33.8"
     },
     {
         "id": 2,
@@ -14,8 +14,8 @@ const dealsData = [
         text: "Perdue Simply Smart Organics Gluten Free",
         rating: "5.0",
         vendor: "Old El Paso",
-        price: "$24.85",
-        changedPrice: "$26.8"
+        price: "₦24.85",
+        changedPrice: "₦26.8"
     },
     {
         "id": 3,
@@ -23,8 +23,8 @@ const dealsData = [
         text: "Signature Wood-Fired Mushroom and Caramelized",
         rating: "3.0",
         vendor: "Progresso",
-        price: "$12.85",
-        changedPrice: "$13.8"
+        price: "₦12.85",
+        changedPrice: "₦13.8"
     },
     {
         "id": 4,
@@ -32,8 +32,8 @@ const dealsData = [
         text: "Simply Lemonade with Raspberry Juice",
         rating: "3.5",
         vendor: "Yoplait",
-        price: "$15.85",
-        changedPrice: "$16.8"
+        price: "₦15.85",
+        changedPrice: "₦16.8"
     },
 ]
 

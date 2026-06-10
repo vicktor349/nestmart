@@ -134,6 +134,8 @@ const Navbar = () =>
     }, [isOpened]);
 
     const { cartItems } = useCart()
+    const [mounted, setMounted] = useState(false)
+    useEffect(() => { setMounted(true) }, [])
 
     return (
         <nav className="bg-white z-9999 sticky top-0 h-24 grid shadow-xl mb-10 z-[9999]">
@@ -231,7 +233,7 @@ const Navbar = () =>
                         <section className="flex items-center">
                             <Link href="/cart"><BsCart2 className="h-6 w-6" /></Link>
                             <div className="absolute ml-3 -mt-5 w-6 h-6 bg-primary text-white border border-primary rounded-full flex items-center justify-center">
-                                {cartItems.length}
+                                {mounted ? cartItems.length : 0}
                             </div>
                             <Link href="/cart" className="text-[#7E7E7E] ssm:hidden xl:flex ml-2">
                                 Cart
